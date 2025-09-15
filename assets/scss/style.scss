@@ -1,0 +1,12 @@
+// 1. Core
+@use 'core/variables';
+@use 'core/mixins';
+@use 'core/base';
+
+// 2. Layout
+@use 'layout/header';
+@use 'layout/subscribe.scss';
+@use 'layout/footer';
+
+// 3. Pages
+@use 'pages/home';

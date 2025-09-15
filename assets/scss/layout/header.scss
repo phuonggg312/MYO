@@ -1,0 +1,176 @@
+@use "../core/variables" as *;
+
+.header {
+    background: $color-muted;
+    //   border-top: 3px solid $color-ink;
+    font-family: $font-body;
+
+    .header_top {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 12px 18px;
+
+        .logo img {
+            padding-top: 5px;
+            height: 60px;
+            width: auto;
+            display: block;
+        }
+
+        .search {
+
+            flex: 1;
+            display: flex;
+            align-items: center;
+
+            position: relative;
+
+            .search_mode {
+                background: $color-pill;
+                height: 40px;
+                color: $color-white;
+                border: 0;
+                border-radius: 12px;
+                padding: 8px 14px;
+                font-family: $font-heading;
+                font-size: $fs-sm;
+                font-weight: 700;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+
+                i {
+                    font-size: 12px;
+                }
+            }
+
+            .search_input {
+                background-color: $color-muted;
+                flex: 1;
+                border: none;
+                border-bottom: 2px solid $color-line;
+                padding: 10px 10px;
+                outline: none;
+                font-family: $font-body;
+                font-size: $fs-base;
+
+            }
+
+            .search_btn {
+                position: absolute;
+                right: 8px;
+                bottom: 8px;
+                border: 0;
+                background: transparent;
+                cursor: pointer;
+                color: $color-icon;
+
+                i {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .currency {
+            background: transparent;
+            border: 0;
+            font-family: $font-body;
+            font-weight: 600;
+            font-size: $fs-sm;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            color: $color-icon;
+
+            i {
+                font-size: 12px;
+            }
+        }
+
+        .action {
+            display: flex;
+            gap: 14px;
+
+            a {
+                color: $color-icon;
+                font-size: 16px;
+                text-decoration: none;
+
+                &:hover {
+                    color: darken($color-icon, 12%);
+                }
+            }
+        }
+    }
+
+    .header_bot {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $color-line;
+        padding: 8px 18px;
+
+        .header-nav ul {
+            display: flex;
+            gap: 70px;
+            list-style: none;
+            margin: 0;
+            padding-left: 10%;
+
+            & :hover {
+                color: $color-accent;
+            }
+
+            li {
+                font-family: $font-heading;
+                font-weight: 800;
+                font-size: $fs-sm;
+
+                color: $color-ink;
+                cursor: pointer;
+
+
+
+            }
+        }
+
+        .resources {
+            background: $color-pill;
+            color: $color-white;
+            text-decoration: none;
+            padding: 6px 14px;
+            border-radius: 16px;
+            font-family: $font-body;
+            font-size: $fs-sm;
+            font-weight: 600;
+        }
+    }
+}
+
+/* Responsive */
+@media (max-width: $bp-md) {
+    .header_top {
+        flex-wrap: wrap;
+
+        .search {
+            flex-basis: 100%;
+        }
+
+        .currency {
+            order: 3;
+        }
+
+        .action {
+            order: 4;
+            margin-left: auto;
+        }
+    }
+
+    .header_bot .header-nav ul {
+        gap: 18px;
+        overflow-x: auto;
+    }
+}

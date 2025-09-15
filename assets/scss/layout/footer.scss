@@ -1,0 +1,64 @@
+@use "../core/variables" as v;
+
+.site-footer {
+  background: v.$color-pill;
+  color: v.$color-white;
+  font-family: v.$font-body;
+  padding: 40px 20px 20px;
+  img{
+    height: 100px;
+  }
+
+  .footer-title {
+    font-weight: 700;
+    margin-bottom: 12px;
+    font-size: v.$fs-base;
+  }
+
+  .footer-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin-bottom: 8px;
+
+      a {
+        color: rgba(255,255,255,.75);
+        font-size: 14px;
+        text-decoration: none;
+        &:hover { color: v.$color-accent; }
+      }
+    }
+  }
+ 
+
+
+  .social-links {
+    display: flex;
+    gap: 25px;
+    margin-top: 12px;
+    a { color: v.$color-white; font-size: 20px; &:hover { color: v.$color-accent; } }
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.15);
+    margin-top: 20px;
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 13px;
+
+    .footer-policy {
+      display: flex;
+      gap: 50px;
+
+      a {
+        color: rgba(255,255,255,.7);
+        text-decoration: none;
+        &:hover { text-decoration: underline; }
+      }
+    }
+  }
+}

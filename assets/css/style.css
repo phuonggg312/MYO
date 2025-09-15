@@ -1,0 +1,480 @@
+.header {
+  background: #f5f4f0;
+  font-family: "San Francisco", "Inter", Arial, sans-serif;
+}
+.header .header_top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 18px;
+}
+.header .header_top .logo img {
+  padding-top: 5px;
+  height: 60px;
+  width: auto;
+  display: block;
+}
+.header .header_top .search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.header .header_top .search .search_mode {
+  background: #353844;
+  height: 40px;
+  color: #ffffff;
+  border: 0;
+  border-radius: 12px;
+  padding: 8px 14px;
+  font-family: "Mango Grotesque", "Oswald", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.header .header_top .search .search_mode i {
+  font-size: 12px;
+}
+.header .header_top .search .search_input {
+  background-color: #f5f4f0;
+  flex: 1;
+  border: none;
+  border-bottom: 2px solid #dcdcdc;
+  padding: 10px 10px;
+  outline: none;
+  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  font-size: 16px;
+}
+.header .header_top .search .search_btn {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: #41454f;
+}
+.header .header_top .search .search_btn i {
+  font-size: 14px;
+}
+.header .header_top .currency {
+  background: transparent;
+  border: 0;
+  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  color: #41454f;
+}
+.header .header_top .currency i {
+  font-size: 12px;
+}
+.header .header_top .action {
+  display: flex;
+  gap: 14px;
+}
+.header .header_top .action a {
+  color: #41454f;
+  font-size: 16px;
+  text-decoration: none;
+}
+.header .header_top .action a:hover {
+  color: rgb(37.375, 39.675, 45.425);
+}
+.header .header_bot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #dcdcdc;
+  padding: 8px 18px;
+}
+.header .header_bot .header-nav ul {
+  display: flex;
+  gap: 70px;
+  list-style: none;
+  margin: 0;
+  padding-left: 10%;
+}
+.header .header_bot .header-nav ul :hover {
+  color: #e53935;
+}
+.header .header_bot .header-nav ul li {
+  font-family: "Mango Grotesque", "Oswald", sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  color: #20222a;
+  cursor: pointer;
+}
+.header .header_bot .resources {
+  background: #353844;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 16px;
+  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .header_top {
+    flex-wrap: wrap;
+  }
+  .header_top .search {
+    flex-basis: 100%;
+  }
+  .header_top .currency {
+    order: 3;
+  }
+  .header_top .action {
+    order: 4;
+    margin-left: auto;
+  }
+  .header_bot .header-nav ul {
+    gap: 18px;
+    overflow-x: auto;
+  }
+}
+.subscribes {
+  background: #eedac3;
+  padding: 36px 18px;
+}
+.subscribes .sub-tt {
+  margin: 0 0 8px;
+  font-family: "Mango Grotesque", "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #20222a;
+}
+.subscribes .sub-ct {
+  margin: 0;
+  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(32, 34, 42, 0.9);
+  max-width: 560px;
+}
+.subscribes .sub-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 560px;
+  margin-left: auto;
+}
+.subscribes .email-input {
+  flex: 1;
+  height: 44px;
+  padding: 0 14px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 999px;
+  background: #fff;
+  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  font-size: 16px;
+  outline: none;
+}
+.subscribes button {
+  height: 44px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 999px;
+  background: #353844;
+  color: #ffffff;
+  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.subscribes .sub-note {
+  margin: 10px 0 0;
+  max-width: 560px;
+  margin-left: auto;
+  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.5;
+}
+.subscribes .sub-note a {
+  color: #20222a;
+  text-decoration: underline;
+}
+@media (max-width: 992px) {
+  .subscribes .sub-form, .subscribes .sub-note {
+    margin-left: 0;
+    max-width: 100%;
+  }
+}
+
+.site-footer {
+  background: #353844;
+  color: #ffffff;
+  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  padding: 40px 20px 20px;
+}
+.site-footer img {
+  height: 100px;
+}
+.site-footer .footer-title {
+  font-weight: 700;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+.site-footer .footer-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.site-footer .footer-list li {
+  margin-bottom: 8px;
+}
+.site-footer .footer-list li a {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+  text-decoration: none;
+}
+.site-footer .footer-list li a:hover {
+  color: #e53935;
+}
+.site-footer .social-links {
+  display: flex;
+  gap: 25px;
+  margin-top: 12px;
+}
+.site-footer .social-links a {
+  color: #ffffff;
+  font-size: 20px;
+}
+.site-footer .social-links a:hover {
+  color: #e53935;
+}
+.site-footer .footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: 20px;
+  padding-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 13px;
+}
+.site-footer .footer-bottom .footer-policy {
+  display: flex;
+  gap: 50px;
+}
+.site-footer .footer-bottom .footer-policy a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+.site-footer .footer-bottom .footer-policy a:hover {
+  text-decoration: underline;
+}
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.hero-section .hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url("../img/23a6a4b5676fa0783705c435293b4a3cf866dc69.jpg") center/cover no-repeat;
+  transform: scaleX(-1);
+  z-index: 0;
+}
+.hero-section img {
+  height: 100px;
+}
+.hero-section .hero-ct {
+  position: relative;
+  color: #ffffff;
+  max-width: 720px;
+  margin-left: 60px;
+  margin-right: 24px;
+  padding: 0 8px;
+}
+.hero-section .hero-ct .hero-title {
+  font-family: "Mango Grotesque", "Oswald", sans-serif;
+  font-weight: 600;
+  line-height: 1.05;
+  font-size: 90px;
+  letter-spacing: 0.5px;
+  margin: 0 0 12px;
+}
+.hero-section .hero-ct .hero-desc {
+  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  font-size: 18px;
+  margin: 0;
+}
+
+.testimonials {
+  padding: 28px 18px 36px;
+}
+.testimonials .t-title {
+  text-align: center;
+  font-family: "Mango Grotesque", "Oswald", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  font-size: 32px;
+  color: #20222a;
+  margin: 0 0 6px;
+}
+.testimonials .t-desc {
+  text-align: center;
+  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  color: rgba(32, 34, 42, 0.75);
+  margin: 0 0 18px;
+}
+.testimonials {
+  /* slider */
+}
+.testimonials .t-slider {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.testimonials .t-track {
+  list-style: none;
+  margin: 0;
+  padding: 0 8px 12px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(280px, 1fr);
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.testimonials .t-card {
+  scroll-snap-align: start;
+  background: #f5f4f0;
+  border-radius: 12px;
+  padding: 20px;
+  min-height: 210px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.testimonials .t-card .t-stars {
+  color: #f5a623;
+}
+.testimonials .t-card .t-quote {
+  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  color: rgba(32, 34, 42, 0.9);
+  line-height: 1.6;
+  margin: 0;
+}
+.testimonials .t-card .t-name {
+  margin-top: auto;
+  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  font-size: 14px;
+  color: rgba(32, 34, 42, 0.9);
+}
+.testimonials .t-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+  background: #353844;
+  color: #fff;
+  display: grid;
+  place-items: center;
+}
+.testimonials .t-dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 10px;
+}
+.testimonials .t-dots .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #c9c9c9;
+}
+.testimonials .t-dots .dot.is-active {
+  background: #20222a;
+}
+
+.brands-section {
+  padding: 28px 18px 55px;
+}
+.brands-section .brands-title {
+  text-align: center;
+  font-family: "Mango Grotesque", "Oswald", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  font-size: 28px;
+  color: #20222a;
+  margin: 0 0 18px;
+}
+.brands-section .brands-logos {
+  list-style: none;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 26px;
+  align-items: center;
+  justify-items: center;
+}
+.brands-section .brands-logos li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.brands-section .brands-logos li img {
+  max-width: 160px;
+  max-height: 75px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.about-badges {
+  padding: 36px 18px 20px;
+}
+.about-badges .about-title {
+  font-family: "Mango Grotesque", "Oswald", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 32px;
+  line-height: 1.1;
+  color: #20222a;
+  margin-bottom: 12px;
+}
+.about-badges .about-text {
+  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  color: rgba(32, 34, 42, 0.9);
+  line-height: 1.6;
+  margin: 0;
+}
+.about-badges .badge-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  align-items: center;
+  justify-items: center;
+}
+.about-badges .badge-list li img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  display: block;
+}
+
+/*# sourceMappingURL=style.css.map */
