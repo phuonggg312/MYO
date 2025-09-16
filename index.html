@@ -6,37 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MYO</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
     <header class="header">
-        <div class="header_top">
-            <!-- logo -->
-            <a href="/" class="logo">
-                <img src="./assets/img/LogoMYO.png" alt="">
-            </a>
-            <!-- search -->
-            <form class="search">
-                <button class="search_mode">
-                    SEARCH <i class="fa-solid fa-chevron-down" style="color: #f5f4f0;"></i>
-                </button>
-                <input type="serch" class="search_input" placeholder="FIND YOUR PERFECT BREW">
-                <button class="search_btn">
-                    <i class="fa-solid fa-magnifying-glass" style="color: #41454f;"></i>
-                </button>
-            </form>
-            <!-- currency -->
-            <button class="currency">
-                $AUD <i class="fa-solid fa-chevron-down" style="color: #41454f;"></i>
-            </button>
-            <!-- action -->
-            <nav class="action">
-                <a href="#"><i class="fa-regular fa-user" style="color: #41454f;"></i></a>
-                <a href="#"><i class="fa-solid fa-cart-shopping" style="color: #41454f;"></i></a>
-            </nav>
-        </div>
+  <!-- Promo bar -->
+  <div class="promo-bar">
+    Sign up and get $10 discount <a href="#">Sign up</a>
+  </div>
+
+  <div class="header_top">
+
+    <button class="menu-btn" aria-label="Open menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- logo -->
+    <a href="/" class="logo">
+      <img src="./assets/img/LogoMYO.png" alt="">
+    </a>
+
+    
+    
+
+    <form class="search">
+      <button class="search_mode">
+        Search <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <input type="search" class="search_input" placeholder="Find your perfect brew">
+      <button class="search_btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </form>
+
+    <!-- currency-->
+    <button class="currency">
+      $AUD <i class="fa-solid fa-chevron-down"></i>
+    </button>
+    <nav class="action">
+      <a href="#"><i class="fa-regular fa-user"></i></a>
+      <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+    </nav>
+  </div>
 
         <!-- nav header -->
         <div class="header_bot">
@@ -71,7 +83,338 @@
         </div>
 
     </section>
-   <section class="testimonials">
+    <!-- category -->
+
+    <section class="category">
+        <div class="container">
+            <h2 class="cate-tt">SHOP BY CATEGORY</h2>
+            <p class="cate-desc"></p>
+            <nav class="cate-nav">
+                <ul>
+                    <li>ALL</li>
+                    <li>BEER</li>
+                    <li>SPIRIT</li>
+                    <li>WINE</li>
+                </ul>
+            </nav>
+            <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-3">
+                <div class="col">
+                    <div class="cate-card">
+                        <img src="./assets/img/category.png" alt="Category">
+                        <h4 class="cate-title">CATEGORY</h4>
+                        <p class="cate-description">Short descriptions of Category</p>
+                        <button class="cate-btn">SHOP NOW</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cate-card">
+                        <img src="./assets/img/category.png" alt="Category">
+                        <h4 class="cate-title">CATEGORY</h4>
+                        <p class="cate-description">Short descriptions of Category</p>
+                        <button class="cate-btn">SHOP NOW</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cate-card">
+                        <img src="./assets/img/category.png" alt="Category">
+                        <h4 class="cate-title">CATEGORY</h4>
+                        <p class="cate-description">Short descriptions of Category</p>
+                        <button class="cate-btn">SHOP NOW</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cate-card">
+                        <img src="./assets/img/category.png" alt="Category">
+                        <h4 class="cate-title">CATEGORY</h4>
+                        <p class="cate-description">Short descriptions of Category</p>
+                        <button class="cate-btn">SHOP NOW</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cate-card">
+                        <img src="./assets/img/category.png" alt="Category">
+                        <h4 class="cate-title">CATEGORY</h4>
+                        <p class="cate-description">Short descriptions of Category</p>
+                        <button class="cate-btn">SHOP NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- topic -->
+    <section class="topics">
+        <div class="topics-grid">
+            <article class="topic-card beer">
+                <img class="topic-img" src="./assets/img/topic1 (1).jpg" alt="Beer">
+                <div class="topic-bar"><span>BEER</span></div>
+                <div class="topic-panel">
+                    <h3 class="topic-title">BEER</h3>
+                    <button class="topic-pill">WHAT DO I NEED TO START?</button>
+                    <button class="topic-pill">WHY HOME BREW?</button>
+                    <button class="topic-pill">HOW DO I HOME BREW?</button>
+                </div>
+            </article>
+
+            <article class="topic-card wine">
+                <img class="topic-img" src="./assets/img/topic1 (2).jpg" alt="Wine">
+                <div class="topic-bar"><span>WINE</span></div>
+                <div class="topic-panel">
+                    <h3 class="topic-title">WINE</h3>
+                    <button class="topic-pill">WHAT DO I NEED TO START?</button>
+                    <button class="topic-pill">WHY HOME BREW?</button>
+                    <button class="topic-pill">HOW DO I HOME BREW?</button>
+                </div>
+            </article>
+
+            <article class="topic-card spirit">
+                <img class="topic-img" src="./assets/img/topic1 (3).jpg" alt="Spirit">
+                <div class="topic-bar"><span>SPIRIT</span></div>
+                <div class="topic-panel">
+                    <h3 class="topic-title">SPIRIT</h3>
+                    <button class="topic-pill">WHAT DO I NEED TO START?</button>
+                    <button class="topic-pill">WHY HOME BREW?</button>
+                    <button class="topic-pill">HOW DO I HOME BREW?</button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="brew-sec">
+        <div class="container">
+            <h2 class="brew-tt">ELEVATE YOUR BREW EXPERIENCE</h2>
+            <p class="brew-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+            <!-- Tabs -->
+            <nav class="brew-tabs">
+                <ul>
+                    <li>FEATURED</li>
+                    <li>BEER</li>
+                    <li>SPIRIT</li>
+                    <li>WINE</li>
+                </ul>
+            </nav>
+
+            <!-- Grid -->
+            <div class="brew-grid">
+                <!-- Card 1 -->
+                <article class="p-card">
+                    <div class="p-top">
+                        <div class="p-badges"><span class="badge">Best seller</span></div>
+                        <button class="p-wish" aria-label="wishlist"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <a class="p-thumb" href="#">
+                        <img src="./assets/img/2135f58d00265db5b7d52f0fd792171c018b7be2.png" alt="Home Brew Kit 1">
+                    </a>
+                    <h3 class="p-title"><a href="#">HOME BREW KIT 1</a></h3>
+                    <div class="p-price">
+                        <span class="cur">$55.00</span>
+                        <s class="old">$65.00</s>
+                    </div>
+                    <div class="p-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <span>10 reviews</span>
+                    </div>
+                    <div class="p-actions">
+                        <button class="btn-ghost">QUICK VIEW</button>
+                        <button class="btn-dark">ADD TO CART</button>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="p-card">
+                    <div class="p-top">
+                        <div class="p-badges"><span class="badge">Best seller</span></div>
+                        <button class="p-wish" aria-label="wishlist"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <a class="p-thumb" href="#">
+                        <img src="./assets/img/bb879843ef7b507b36cedc719333efe56de058c6.jpg" alt="">
+                    </a>
+                    <h3 class="p-title"><a href="#">HOME BREW KIT 1</a></h3>
+                    <div class="p-price"><span class="cur">$55.00</span><s class="old">$55.00</s></div>
+                    <div class="p-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <span>10 reviews</span>
+                    </div>
+                    <div class="p-actions">
+                        <button class="btn-ghost">QUICK VIEW</button>
+                        <button class="btn-dark">ADD TO CART</button>
+                    </div>
+                </article>
+                <article class="p-card">
+                    <div class="p-top">
+                        <div class="p-badges"><span class="badge">Best seller</span>
+                              <span class="badge">Featured</span>
+                            <span class="badge is-sale">On Sale</span></div>
+                        <button class="p-wish" aria-label="wishlist"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <a class="p-thumb" href="#">
+                        <img src="./assets/img/bb879843ef7b507b36cedc719333efe56de058c6.jpg" alt="">
+                    </a>
+                    <h3 class="p-title"><a href="#">HOME BREW KIT 1</a></h3>
+                    <div class="p-price"><span class="cur">$55.00</span><s class="old">$55.00</s></div>
+                    <div class="p-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <span>10 reviews</span>
+                    </div>
+                    <div class="p-actions">
+                        <button class="btn-ghost">QUICK VIEW</button>
+                        <button class="btn-dark">ADD TO CART</button>
+                    </div>
+                </article>
+                <!-- Card 4 -->
+                                <article class="p-card">
+                    <div class="p-top">
+                        <div class="p-badges"><span class="badge">Best seller</span>
+                              <span class="badge">Featured</span>
+                            <span class="badge is-sale">On Sale</span></div>
+                        <button class="p-wish" aria-label="wishlist"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <a class="p-thumb" href="#">
+                        <img src="./assets/img/bb879843ef7b507b36cedc719333efe56de058c6.jpg" alt="">
+                    </a>
+                    <h3 class="p-title"><a href="#">HOME BREW KIT 1</a></h3>
+                    <div class="p-price"><span class="cur">$55.00</span><s class="old">$55.00</s></div>
+                    <div class="p-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <span>10 reviews</span>
+                    </div>
+                    <div class="p-actions">
+                        <button class="btn-ghost">QUICK VIEW</button>
+                        <button class="btn-dark">ADD TO CART</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- introduce-sc -->
+
+    <section class="hero-in-section">
+        <div class="hero-in-bg">
+            <div class="hero-in-ct">
+
+                <h1 class="hero-in-tt">
+                    MAKE YOUR OUT DRINK
+                </h1>
+                <p class="hero-in-desc">Descrip exactly what the company does and what the customer can expect when
+                    working
+                    with the company. Avoid using verbose words or phrases.</p>
+                <button class="hero-in-btn">
+                    <img src="./assets/img/Vector.png" alt="">
+                    RECIPE BUILDER
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+    <!-- blog -->
+    <section class="resources-sec">
+        <div class="container">
+            <p class="rs-eyebrow">RESOURCES</p>
+            <h2 class="rs-title">WHAT'S TRENDING RIGHT NOW?</h2>
+            <p class="rs-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="featured">
+                <p>Featured blog posts</p>
+            </div>
+            <div class="row g-4">
+                <!-- LEFT: Featured post -->
+                <div class="col-lg-7">
+                    <article class="rs-featured">
+                        <a href="#" class="thumb is-video">
+                            <img src="./assets/img/blog-1.jpg" alt="">
+                        </a>
+
+                        <div class="tags">
+                            <span class="tag is-spirit">SPIRIT</span>
+                            <span class="tag is-brewer">BREWER'S CHOICE</span>
+                        </div>
+
+                        <h3 class="post-title">
+                            <a href="#">Blog title heading will go here</a>
+                        </h3>
+
+                        <p class="excerpt">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
+                            <a href="#" class="read-more">Read more</a>
+                        </p>
+
+                        <div class="meta">
+                            <time datetime="2024-02-12">12 Feb 2024</time>
+                            <span class="dot">|</span>
+                            <span>5 min read</span>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- RIGHT: 3 small posts -->
+                <div class="col-lg-5">
+                    <ul class="rs-list">
+                        <li class="rs-item">
+                            <a href="#" class="thumb">
+                                <img src="./assets/img/23a6a4b5676fa0783705c435293b4a3cf866dc69.jpg" alt="">
+                            </a>
+                            <div class="info">
+                                <span class="tag is-beer">BEER</span>
+                                <h4 class="post-title"><a href="#">Blog title heading will go here</a></h4>
+                                <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    <a href="#" class="read-more">Read more</a>
+                                </p>
+                                <div class="meta"><time>12 Feb 2024</time><span class="dot">|</span><span>5 min
+                                        read</span></div>
+                            </div>
+                        </li>
+
+                        <li class="rs-item">
+                            <a href="#" class="thumb"><img
+                                    src="./assets/img/23a6a4b5676fa0783705c435293b4a3cf866dc69.jpg" alt=""></a>
+                            <div class="info">
+                                <span class="tag is-beer">BEER</span>
+                                <h4 class="post-title"><a href="#">Blog title heading will go here</a></h4>
+                                <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    <a href="#" class="read-more">Read more</a>
+                                </p>
+                                <div class="meta"><time>12 Feb 2024</time><span class="dot">|</span><span>5 min
+                                        read</span></div>
+                            </div>
+                        </li>
+
+                        <li class="rs-item">
+                            <a href="#" class="thumb"><img
+                                    src="./assets/img/23a6a4b5676fa0783705c435293b4a3cf866dc69.jpg" alt=""></a>
+                            <div class="info">
+                                <span class="tag is-beer">BEER</span>
+                                <h4 class="post-title"><a href="#">Blog title heading will go here</a></h4>
+                                <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    <a href="#" class="read-more">Read more</a>
+                                </p>
+                                <div class="meta"><time>12 Feb 2024</time><span class="dot">|</span><span>5 min
+                                        read</span></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center mt-3">
+                <a href="#" class="rs-more">SEE ALL CONTENTS</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
         <div class="container">
             <h2 class="t-title">CUSTOMER TESTIMONIALS</h2>
             <p class="t-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -118,7 +461,7 @@
                         <div class="t-name">Customer Name</div>
                     </li>
 
-                  
+
                 </ul>
 
             </div>
@@ -130,7 +473,7 @@
     <section class="brands-section">
         <div class="container">
             <h2 class="brands-title">MEET OUR BRANDS</h2>
-            <ul class="brands-logos">
+            <ul class="brands-logos row">
                 <li><img src="./assets/img/grain.png" alt="Grainfather"></li>
                 <li><img src="./assets/img/jacks.png" alt="Mangrove Jacks"></li>
                 <li><img src="./assets/img/still.png" alt="Still Spirits"></li>
@@ -140,31 +483,34 @@
             </ul>
         </div>
     </section>
- 
+
 
     <!-- ABOUT US + BADGES -->
     <section class="about-badges">
-        <div class="container row gx-5">
-            <div class="col-lg-5">
-                <h3 class="about-title">A LITTLE ABOUT US</h3>
-                <p class="about-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-                <p class="about-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-                <p class="about-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-            </div>
-            <div class="col-lg-7">
-                <ul class="badge-list">
-                    <li><img src="./assets/img/image-removebg-preview-1.png" alt=""></li>
-                    <li><img src="./assets/img/image-removebg-preview-1.png" alt=""></li>
-                    <li><img src="./assets/img/image-removebg-preview-1.png" alt=""></li>
-                </ul>
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-md-5">
+                    <h3 class="about-title">A LITTLE ABOUT US</h3>
+                    <p class="about-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <p class="about-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <p class="about-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                </div>
+                <div class="col-md-7">
+                    <ul class="badge-list">
+                        <li><img src="./assets/img/image-removebg-preview-1.png" alt=""></li>
+                        <li><img src="./assets/img/image-removebg-preview-1.png" alt=""></li>
+                        <li><img src="./assets/img/image-removebg-preview-1.png" alt=""></li>
+                    </ul>
+                </div>
             </div>
         </div>
+
     </section>
 
     <!-- subscribes -->
@@ -193,59 +539,69 @@
     </section>
 
     <footer class="site-footer">
-        <div class="footer-top container">
-            <div class="row">
-                <div class="col-md-3 mb-4">
-                    <a href="/" class="logo_t">
-                        <img src="./assets/img/Logo-1.png" alt="MYO Drinks">
-                    </a>
-                    <div class="social-links">
-                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-md-3 mb-4">
-                    <h5 class="footer-title">About</h5>
-                    <ul class="footer-list">
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Our mission</a></li>
-                        <li><a href="#">Work with us</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-3 mb-4">
-                    <h5 class="footer-title">Resources</h5>
-                    <ul class="footer-list">
-                        <li><a href="#">Blogs</a></li>
-                        <li><a href="#">Tutorials</a></li>
-                        <li><a href="#">Instructions</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-3 mb-4">
-                    <h5 class="footer-title">Customer care</h5>
-                    <ul class="footer-list">
-                        <li><a href="#">Help & Contact us</a></li>
-                        <li><a href="#">Returns & Exchanges</a></li>
-                        <li><a href="#">Shipping & Delivery</a></li>
-                    </ul>
-                </div>
-            </div>
+  <div class="footer-top container">
+    <div class="row gy-4">
+      <div class="col-md-3">
+        <a href="/" class="logo_t">
+          <img src="./assets/img/Logo-1.png" alt="MYO Drinks">
+        </a>
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
         </div>
+      </div>
 
-        <div class="footer-bottom container">
-            <p>© 2024 MYO Drinks. All rights reserved.</p>
-            <div class="footer-policy">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Cookies Settings</a>
-            </div>
+      <div class="col-md-3">
+        <div class="footer-accordion">
+          <input id="acc-about" type="checkbox">
+          <label class="acc-hd" for="acc-about">About</label>
+          <h5 class="footer-title">About</h5>
+          <ul class="footer-list">
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Our mission</a></li>
+            <li><a href="#">Work with us</a></li>
+          </ul>
         </div>
-    </footer>
+      </div>
 
+      <div class="col-md-3">
+        <div class="footer-accordion">
+          <input id="acc-res" type="checkbox">
+          <label class="acc-hd" for="acc-res">Resources</label>
+          <h5 class="footer-title">Resources</h5>
+          <ul class="footer-list">
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Tutorials</a></li>
+            <li><a href="#">Instructions</a></li>
+          </ul>
+        </div>
+      </div>
 
+      <div class="col-md-3">
+        <div class="footer-accordion">
+          <input id="acc-care" type="checkbox">
+          <label class="acc-hd" for="acc-care">Customer care</label>
+          <h5 class="footer-title">Customer care</h5>
+          <ul class="footer-list">
+            <li><a href="#">Help & Contact us</a></li>
+            <li><a href="#">Returns & Exchanges</a></li>
+            <li><a href="#">Shipping & Delivery</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom container">
+    <p>© 2024 MYO Drinks. All rights reserved.</p>
+    <div class="footer-policy">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Cookies Settings</a>
+    </div>
+  </div>
+</footer>
 </body>
 
 </html>
