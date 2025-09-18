@@ -1,0 +1,58 @@
+@use "../core/variables" as v;
+%section-title {
+  text-align: center;
+  font-family: v.$font-heading;
+  font-weight: 800;
+  letter-spacing: .5px;
+  color: v.$color-ink;
+  text-transform: uppercase;
+}
+
+%section-subtitle {
+  text-align: center;
+  font-family: v.$font-body;
+  color: rgba(v.$color-ink, .75);
+}
+
+%slider-arrow-base {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  border: 0;
+  display: grid;
+  place-items: center;
+  z-index: 5;
+  cursor: pointer;
+}
+
+
+@mixin slick-dots-style($size, $inactive-color, $active-color) {
+  li {
+    width: $size;
+    height: $size;
+    margin: 0;
+
+    button {
+      width: $size;
+      height: $size;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+
+      &::before {
+        content: "";
+        display: block;
+        width: $size;
+        height: $size;
+        border-radius: 50%;
+        background: $inactive-color;
+        opacity: 1;
+      }
+    }
+
+    &.slick-active button::before {
+      background: $active-color;
+    }
+  }
+}
