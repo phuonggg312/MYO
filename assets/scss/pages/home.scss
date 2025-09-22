@@ -5,6 +5,7 @@
 .hero-slider {
   position: relative;
   overflow: hidden;
+  
 
   .slick-dots {
     position: absolute;
@@ -50,8 +51,9 @@
 }
 
 .hero-section {
-  min-height: 520px;
+  min-height: 600px;
   position: relative;
+
   height: 100vh;
   min-height: 600px;
   overflow: hidden;
@@ -102,7 +104,8 @@
 
   .cate-tt {
     @extend %section-title;
-    font-size: 32px;
+    font-size: 50px;
+    letter-spacing: -0.05em;
     margin: 0 0 6px;
   }
 
@@ -113,10 +116,11 @@
 
   .cate-nav {
     display: flex;
+    padding-top: 60px;
     justify-content: center;
     margin-bottom: 16px;
 
-    ul {
+    .cate-bg{
       display: flex;
       gap: 10px;
       list-style: none;
@@ -126,7 +130,8 @@
       border-radius: 999px;
     }
 
-    li {
+    .cate-pill {
+      border: none;
       font-family: v.$font-body;
       font-size: v.$fs-sm;
       color: v.$color-ink;
@@ -197,7 +202,7 @@
   /* card */
   .cate-card {
     position: relative;
-    height: 100%;
+    height: 330px;
     border: 1px solid v.$color-line;
     border-radius: 12px;
     padding: 16px 12px 56px;
@@ -457,7 +462,7 @@
     background: transparent; height:auto; border-radius:18px;
 
     .mb-head{
-      width:100%; border:0; border-radius:0px; padding:18px 16px;
+      width:100%; border:0; border-radius:18px 18px 0 0; padding:18px 16px;
       font-family:"Mango Grotesque","Oswald",sans-serif; font-weight:800; letter-spacing:.5px;
       text-transform:uppercase; font-size:44px; line-height:1; color:#fff; cursor:pointer;
       display:block;
@@ -467,7 +472,7 @@
     &.spirit .mb-head{ background: v.$color-spirit; }
 
     .mb-panel{
-      background:#e9dfcf; border-radius:0 0 18px 18px; padding:18px 14px; margin-top:0px;
+      background:#e9dfcf; border-radius:0 0 18px 18px; padding:0px 14px; margin-top:0px;
       max-height:0; overflow:hidden; opacity:.0; transition:max-height .28s ease, opacity .2s ease;
       display:grid; gap:12px; justify-items:center;
     }
@@ -504,7 +509,7 @@
     justify-content: center;
     margin-bottom: 16px;
 
-    ul {
+    .brew-bg {
       list-style: none;
       margin: 0;
       padding: 6px;
@@ -514,17 +519,18 @@
       border-radius: 999px;
     }
 
-    li {
+    .brew-pill {
       padding: 6px 14px;
       border-radius: 999px;
       cursor: pointer;
       font-family: "San Francisco", "Inter", Arial, sans-serif;
       font-size: 14px;
       color: #20222a;
+      border: none;
     }
 
-    li.is-active,
-    li:hover {
+    .brew-pill.is-active,
+    .brew-pill:hover {
       background: #353844;
       color: #fff;
     }
@@ -1196,6 +1202,7 @@
 /* ---------------- RESPONSIVE ---------------- */
 @media (max-width: 640px) {
   .hero-section {
+    padding-top:60px;
     height: 72vh;
     justify-content: center;
     text-align: center;

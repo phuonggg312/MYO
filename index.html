@@ -14,31 +14,59 @@
 </head>
 
 <body>
-    <header class="header">
+
+ <header class="header">
         <!-- Promo bar -->
+
         <div class="promo-bar">
             Sign up and get $10 discount <a href="#">Sign up</a>
         </div>
 
         <div class="header_top">
 
-            <button class="menu-btn" aria-label="Open menu">
+            <button class="menu-btn" type="button" aria-expanded="false" aria-controls="main-menu"
+                aria-label="Open menu">
                 <i class="fa-solid fa-bars"></i>
             </button>
 
+            <!-- MUST be adjacent sibling of .menu-btn -->
+            <div class="menu-tab" id="main-menu" role="menu" aria-hidden="true">
+                <ul class="menu-list">
+                    <li><a href="#">BEER</a></li>
+                    <li><a href="#">SPIRITS</a></li>
+                    <li><a href="#">WINE</a></li>
+                    <li><a href="#">CIDER</a></li>
+                    <li><a href="#">SPECIALITY</a></li>
+
+                    <li class="menu_resource"><a href="#">RESOURCES</a></li>
+                    <li class="menu_help"><a href="#">HELP CENTRE</a></li>
+                </ul>
+            </div>
+
+
             <!-- logo -->
             <a href="/" class="logo">
-                <img src="./assets/img/LogoMYO.png" alt="">
+                <img src="./assets/img/MYO Drinks Logo LScape Blk.png" alt="">
             </a>
 
 
 
-            <form class="search">
+            <form class="search search--mobile">
                 <button class="search_mode">
-                    Search <i class="fa-solid fa-chevron-down"></i>
+                    SEARCH <i class="fa-solid fa-chevron-down"></i>
                 </button>
                 <input type="search" class="search_input" placeholder="Find your perfect brew">
                 <button class="search_btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <div class="search_tab">
+                    <ul class="search_list">
+                        <li>BEER</li>
+                        <li>SPIRITS</li>
+                        <li>WINE</li>
+                        <li>CIDER</li>
+                        <li>SPECIALITY</li>
+
+                    </ul>
+                </div>
             </form>
 
             <!-- currency-->
@@ -66,7 +94,7 @@
             <a href="#" class="resources">RESOURCES</a>
         </div>
     </header>
-    <section class="hero-slider">
+        <section class="hero-slider">
         <!-- Slide 1 -->
         <div class="hero-section">
             <div class="hero-bg"
@@ -131,18 +159,20 @@
     <section class="category">
         <div class="container">
             <h2 class="cate-tt">SHOP BY CATEGORY</h2>
-            <p class="cate-desc"></p>
-            <nav class="cate-nav">
-                <ul>
-                    <li>ALL</li>
-                    <li>BEER</li>
-                    <li>SPIRIT</li>
-                    <li>WINE</li>
-                </ul>
+            <p class="cate-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+            <nav class="cate-nav" role="tablist" aria-label="Shop by category">
+                <div class="cate-bg">
+                    <button class="cate-pill is-active" role="tab" aria-selected="true" data-filter="all">ALL</button>
+                    <button class="cate-pill" role="tab" aria-selected="false" data-filter="beer">BEER</button>
+                    <button class="cate-pill" role="tab" aria-selected="false" data-filter="spirit">SPIRIT</button>
+                    <button class="cate-pill" role="tab" aria-selected="false" data-filter="wine">WINE</button>
+                </div>
+
             </nav>
             <!-- Slider -->
             <div class="cate-slider">
-                <div class="cate-item">
+                <div class="cate-item" data-cat="beer">
                     <div class="cate-card">
                         <img src="./assets/img/category.png" alt="Category">
                         <h4 class="cate-title">CATEGORY</h4>
@@ -150,7 +180,7 @@
                         <button class="cate-btn">SHOP NOW</button>
                     </div>
                 </div>
-                <div class="cate-item">
+                <div class="cate-item" data-cat="beer">
                     <div class="cate-card">
                         <img src="./assets/img/category.png" alt="Category">
                         <h4 class="cate-title">CATEGORY</h4>
@@ -158,7 +188,7 @@
                         <button class="cate-btn">SHOP NOW</button>
                     </div>
                 </div>
-                <div class="cate-item">
+                <div class="cate-item" data-cat="beer">
                     <div class="cate-card">
                         <img src="./assets/img/category.png" alt="Category">
                         <h4 class="cate-title">CATEGORY</h4>
@@ -166,7 +196,7 @@
                         <button class="cate-btn">SHOP NOW</button>
                     </div>
                 </div>
-                <div class="cate-item">
+                <div class="cate-item" data-cat="beer">
                     <div class="cate-card">
                         <img src="./assets/img/category.png" alt="Category">
                         <h4 class="cate-title">CATEGORY</h4>
@@ -174,7 +204,7 @@
                         <button class="cate-btn">SHOP NOW</button>
                     </div>
                 </div>
-                <div class="cate-item">
+                <div class="cate-item" data-cat="wine">
                     <div class="cate-card">
                         <img src="./assets/img/category.png" alt="Category">
                         <h4 class="cate-title">CATEGORY</h4>
@@ -182,7 +212,7 @@
                         <button class="cate-btn">SHOP NOW</button>
                     </div>
                 </div>
-                <div class="cate-item">
+                <div class="cate-item" data-cat="wine">
                     <div class="cate-card">
                         <img src="./assets/img/category.png" alt="Category">
                         <h4 class="cate-title">CATEGORY</h4>
@@ -190,7 +220,7 @@
                         <button class="cate-btn">SHOP NOW</button>
                     </div>
                 </div>
-                <div class="cate-item">
+                <div class="cate-item" data-cat="wine">
                     <div class="cate-card">
                         <img src="./assets/img/category.png" alt="Category">
                         <h4 class="cate-title">CATEGORY</h4>
@@ -198,7 +228,7 @@
                         <button class="cate-btn">SHOP NOW</button>
                     </div>
                 </div>
-                <div class="cate-item">
+                <div class="cate-item" data-cat="spirit">
                     <div class="cate-card">
                         <img src="./assets/img/category.png" alt="Category">
                         <h4 class="cate-title">CATEGORY</h4>
@@ -206,7 +236,7 @@
                         <button class="cate-btn">SHOP NOW</button>
                     </div>
                 </div>
-                <div class="cate-item">
+                <div class="cate-item" data-cat="spirit">
                     <div class="cate-card">
                         <img src="./assets/img/category.png" alt="Category">
                         <h4 class="cate-title">CATEGORY</h4>
@@ -214,7 +244,7 @@
                         <button class="cate-btn">SHOP NOW</button>
                     </div>
                 </div>
-                <div class="cate-item">
+                <div class="cate-item" data-cat="spirit">
                     <div class="cate-card">
                         <img src="./assets/img/category.png" alt="Category">
                         <h4 class="cate-title">CATEGORY</h4>
@@ -305,19 +335,21 @@
             <p class="brew-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
             <!-- Tabs -->
-            <nav class="brew-tabs">
-                <ul>
-                    <li>FEATURED</li>
-                    <li>BEER</li>
-                    <li>SPIRIT</li>
-                    <li>WINE</li>
-                </ul>
+            <nav class="brew-tabs" role="tablist" aria-label="Elevate tabs">
+                <div class="brew-bg">
+                    <button class="brew-pill is-active" role="tab" aria-selected="true"
+                        data-filter="featured">FEATURED</button>
+                    <button class="brew-pill" role="tab" aria-selected="false" data-filter="beer">BEER</button>
+                    <button class="brew-pill" role="tab" aria-selected="false" data-filter="spirit">SPIRIT</button>
+                    <button class="brew-pill" role="tab" aria-selected="false" data-filter="wine">WINE</button>
+
+                </div>
             </nav>
 
             <!-- Grid -->
             <div class="brew-grid">
                 <!-- Card 1 -->
-                <article class="p-card">
+                <article class="p-card" data-cat="featured beer">
                     <div class="p-top">
                         <div class="p-badges"><span class="badge">Best seller</span></div>
                         <button class="p-wish" aria-label="wishlist"><i class="fa-regular fa-heart"></i></button>
@@ -341,7 +373,7 @@
                         <button class="btn-dark">ADD TO CART</button>
                     </div>
                 </article>
-                <article class="p-card">
+                <article class="p-card" data-cat="featured beer">
                     <div class="p-top">
                         <div class="p-badges"><span class="badge">Best seller</span></div>
                         <button class="p-wish" aria-label="wishlist"><i class="fa-regular fa-heart"></i></button>
@@ -365,7 +397,7 @@
                         <button class="btn-dark">ADD TO CART</button>
                     </div>
                 </article>
-                <article class="p-card">
+                <article class="p-card" data-cat="featured beer">
                     <div class="p-top">
                         <div class="p-badges"><span class="badge">Best seller</span></div>
                         <button class="p-wish" aria-label="wishlist"><i class="fa-regular fa-heart"></i></button>
@@ -389,7 +421,7 @@
                         <button class="btn-dark">ADD TO CART</button>
                     </div>
                 </article>
-                <article class="p-card">
+                <article class="p-card" data-cat="featured beer">
                     <div class="p-top">
                         <div class="p-badges"><span class="badge">Best seller</span></div>
                         <button class="p-wish" aria-label="wishlist"><i class="fa-regular fa-heart"></i></button>
@@ -413,7 +445,7 @@
                         <button class="btn-dark">ADD TO CART</button>
                     </div>
                 </article>
-                <article class="p-card">
+                <article class="p-card" data-cat="featured beer">
                     <div class="p-top">
                         <div class="p-badges"><span class="badge">Best seller</span></div>
                         <button class="p-wish" aria-label="wishlist"><i class="fa-regular fa-heart"></i></button>
@@ -439,7 +471,7 @@
                 </article>
 
                 <!-- Card 2 -->
-                <article class="p-card">
+                <article class="p-card" data-cat="featured beer">
                     <div class="p-top">
                         <div class="p-badges"><span class="badge">Best seller</span></div>
                         <button class="p-wish" aria-label="wishlist"><i class="fa-regular fa-heart"></i></button>
@@ -460,7 +492,7 @@
                         <button class="btn-dark">ADD TO CART</button>
                     </div>
                 </article>
-                <article class="p-card">
+                <article class="p-card" data-cat="wine">
                     <div class="p-top">
                         <div class="p-badges"><span class="badge">Best seller</span>
                             <span class="badge">Featured</span>
@@ -485,7 +517,107 @@
                     </div>
                 </article>
                 <!-- Card 4 -->
-                <article class="p-card">
+                <article class="p-card" data-cat="wine">
+                    <div class="p-top">
+                        <div class="p-badges"><span class="badge">Best seller</span>
+                            <span class="badge">Featured</span>
+                            <span class="badge is-sale">On Sale</span>
+                        </div>
+                        <button class="p-wish" aria-label="wishlist"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <a class="p-thumb" href="#">
+                        <img src="./assets/img/bb879843ef7b507b36cedc719333efe56de058c6.jpg" alt="">
+                    </a>
+                    <h3 class="p-title"><a href="#">HOME BREW KIT 1</a></h3>
+                    <div class="p-price"><span class="cur">$55.00</span><s class="old">$55.00</s></div>
+                    <div class="p-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <span>10 reviews</span>
+                    </div>
+                    <div class="p-actions">
+                        <button class="btn-ghost">QUICK VIEW</button>
+                        <button class="btn-dark">ADD TO CART</button>
+                    </div>
+                </article>
+
+                <article class="p-card" data-cat="beer">
+                    <div class="p-top">
+                        <div class="p-badges"><span class="badge">Best seller</span>
+                            <span class="badge">Featured</span>
+                            <span class="badge is-sale">On Sale</span>
+                        </div>
+                        <button class="p-wish" aria-label="wishlist"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <a class="p-thumb" href="#">
+                        <img src="./assets/img/bb879843ef7b507b36cedc719333efe56de058c6.jpg" alt="">
+                    </a>
+                    <h3 class="p-title"><a href="#">HOME BREW KIT 1</a></h3>
+                    <div class="p-price"><span class="cur">$55.00</span><s class="old">$55.00</s></div>
+                    <div class="p-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <span>10 reviews</span>
+                    </div>
+                    <div class="p-actions">
+                        <button class="btn-ghost">QUICK VIEW</button>
+                        <button class="btn-dark">ADD TO CART</button>
+                    </div>
+                </article>
+
+                <article class="p-card" data-cat="beer">
+                    <div class="p-top">
+                        <div class="p-badges"><span class="badge">Best seller</span>
+                            <span class="badge">Featured</span>
+                            <span class="badge is-sale">On Sale</span>
+                        </div>
+                        <button class="p-wish" aria-label="wishlist"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <a class="p-thumb" href="#">
+                        <img src="./assets/img/bb879843ef7b507b36cedc719333efe56de058c6.jpg" alt="">
+                    </a>
+                    <h3 class="p-title"><a href="#">HOME BREW KIT 1</a></h3>
+                    <div class="p-price"><span class="cur">$55.00</span><s class="old">$55.00</s></div>
+                    <div class="p-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <span>10 reviews</span>
+                    </div>
+                    <div class="p-actions">
+                        <button class="btn-ghost">QUICK VIEW</button>
+                        <button class="btn-dark">ADD TO CART</button>
+                    </div>
+                </article>
+
+                <article class="p-card" data-cat="beer">
+                    <div class="p-top">
+                        <div class="p-badges"><span class="badge">Best seller</span>
+                            <span class="badge">Featured</span>
+                            <span class="badge is-sale">On Sale</span>
+                        </div>
+                        <button class="p-wish" aria-label="wishlist"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <a class="p-thumb" href="#">
+                        <img src="./assets/img/bb879843ef7b507b36cedc719333efe56de058c6.jpg" alt="">
+                    </a>
+                    <h3 class="p-title"><a href="#">HOME BREW KIT 1</a></h3>
+                    <div class="p-price"><span class="cur">$55.00</span><s class="old">$55.00</s></div>
+                    <div class="p-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <span>10 reviews</span>
+                    </div>
+                    <div class="p-actions">
+                        <button class="btn-ghost">QUICK VIEW</button>
+                        <button class="btn-dark">ADD TO CART</button>
+                    </div>
+                </article>
+
+                <article class="p-card" data-cat="featured spirit">
                     <div class="p-top">
                         <div class="p-badges"><span class="badge">Best seller</span>
                             <span class="badge">Featured</span>
@@ -760,102 +892,17 @@
 
     </section>
 
-    <!-- subscribes -->
-    <section class="subscribes">
-        <div class="container">
-            <div class="row align-items-center g-4">
-                <div class="col-md-6">
-                    <h3 class="sub-tt">Sign up to be inspired</h3>
-                    <p class="sub-ct">
-                        Subscribe to our newsletter for exclusive offers and receive a 10% discount on your first
-                        purchase.
-                    </p>
-                </div>
-                <div class="col-md-6">
-                    <form class="sub-form">
-                        <input type="email" class="email-input" placeholder="Enter your email address" required>
-                        <button type="submit">Subscribe</button>
-                    </form>
-                    <p class="sub-note">
-                        By subscribing you agree to with our <a href="#">Privacy Policy</a> and provide consent to
-                        receive updates from our company.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <footer class="site-footer">
-        <div class="footer-top container">
-            <div class="row gy-4">
-                <div class="col-md-3">
-                    <a href="/" class="logo_t">
-                        <img src="./assets/img/Logo-1.png" alt="MYO Drinks">
-                    </a>
-                    <div class="social-links">
-                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="footer-accordion">
-                        <input id="acc-about" type="checkbox">
-                        <label class="acc-hd" for="acc-about">About</label>
-                        <h5 class="footer-title">About</h5>
-                        <ul class="footer-list">
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Our mission</a></li>
-                            <li><a href="#">Work with us</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="footer-accordion">
-                        <input id="acc-res" type="checkbox">
-                        <label class="acc-hd" for="acc-res">Resources</label>
-                        <h5 class="footer-title">Resources</h5>
-                        <ul class="footer-list">
-                            <li><a href="#">Blogs</a></li>
-                            <li><a href="#">Tutorials</a></li>
-                            <li><a href="#">Instructions</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="footer-accordion">
-                        <input id="acc-care" type="checkbox">
-                        <label class="acc-hd" for="acc-care">Customer care</label>
-                        <h5 class="footer-title">Customer care</h5>
-                        <ul class="footer-list">
-                            <li><a href="#">Help & Contact us</a></li>
-                            <li><a href="#">Returns & Exchanges</a></li>
-                            <li><a href="#">Shipping & Delivery</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-bottom container">
-            <p>© 2024 MYO Drinks. All rights reserved.</p>
-            <div class="footer-policy">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Cookies Settings</a>
-            </div>
-        </div>
-    </footer>
+    <div data-include="/partials/footer.html"></div>
 
     <!-- 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
+    <script src="./menu.js"></script>
     <script src="./slider.js"></script>
+    <script src="./tab.js"></script>
+    <script src="./include.js"></script>
     <script>
         document.addEventListener('click', function (e) {
             const head = e.target.closest('.topics--mb .mb-head');
@@ -874,6 +921,46 @@
             head.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
         });
     </script>
+        <script>document.addEventListener('DOMContentLoaded', function () {
+                const searchMode = document.querySelector('.search--mobile .search_mode');
+                const searchTab = document.querySelector('.search--mobile .search_tab');
+
+                searchMode.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    searchMode.classList.toggle('active');
+                    searchTab.style.display = searchMode.classList.contains('active') ? 'block' : 'none';
+                });
+
+                document.addEventListener('click', function (e) {
+                    if (!searchMode.contains(e.target) && !searchTab.contains(e.target)) {
+                        searchMode.classList.remove('active');
+                        searchTab.style.display = 'none';
+                    }
+                });
+            });
+    </script>
+    <script>
+        const sm = document.querySelector('.search--mobile');
+        sm?.addEventListener('submit', e => e.preventDefault());
+        sm?.querySelector('.search_mode')?.setAttribute('type', 'button');
+
+        sm?.querySelector('.search_mode')?.addEventListener('click', e => {
+            e.stopPropagation();
+            sm.classList.toggle('is-open');
+        });
+        document.addEventListener('click', e => { if (sm && !sm.contains(e.target)) sm.classList.remove('is-open'); });
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') sm?.classList.remove('is-open'); });
+
+        const mq = window.matchMedia('(min-width: 769px)');
+        function sync() { sm?.classList.remove('is-open'); }
+        mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+        sync();
+    </script>
+    <script>
+
+    </script>
+
+
 
 </body>
 
