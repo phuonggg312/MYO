@@ -18,142 +18,772 @@
 <body>
     <div data-include="/partials/header.html"></div>
     <section class="p-hero">
-    <!-- Left: thumbnails -->
-    <aside class="p-hero__thumbs" aria-label="Gallery thumbnails">
-        <button class="p-hero__thumb is-active" aria-current="true">
-            <img src="./assets/img/6c5e45dd16bce9e92794f70054516bcb6f500222.png" alt="Main image 1">
-        </button>
-        <button class="p-hero__thumb">
-            <img src="./assets/img/6c5e45dd16bce9e92794f70054516bcb6f500222.png" alt="Main image 2">
-        </button>
-        <button class="p-hero__thumb">
-            <img src="./assets/img/6c5e45dd16bce9e92794f70054516bcb6f500222.png" alt="Main image 3">
-        </button>
-    </aside>
+        <!-- Left: thumbnails -->
+        <aside class="p-hero__thumbs" aria-label="Gallery thumbnails">
+            <button class="p-hero__thumb is-active" aria-current="true">
+                <img src="./assets/img/6c5e45dd16bce9e92794f70054516bcb6f500222.png" alt="Main image 1">
+            </button>
+            <button class="p-hero__thumb">
+                <img src="./assets/img/6c5e45dd16bce9e92794f70054516bcb6f500222.png" alt="Main image 2">
+            </button>
+            <button class="p-hero__thumb">
+                <img src="./assets/img/6c5e45dd16bce9e92794f70054516bcb6f500222.png" alt="Main image 3">
+            </button>
+        </aside>
 
-    <!-- Center: big image -->
-    <figure class="p-hero__media">
-        <img src="./assets/img/ffd706a46f3a3af0e61d5213a66625281192e019.png " alt="Kit Bundle main image">
-    </figure>
+        <!-- Center: big image -->
+        <figure class="p-hero__media">
+            <img src="./assets/img/ffd706a46f3a3af0e61d5213a66625281192e019.png " alt="Kit Bundle main image">
+        </figure>
 
-    <!-- Right: product card -->
-    <aside class="p-hero__card">
-        <div class="p-card">
-            <div class="p-card__badges">
-                <span class="badge badge--pill">BEER</span>
-                <span class="badge badge--sale">SALE</span>
-            </div>
-
-            <h1 class="p-card__title">Kit Bundle</h1>
-
-            <div class="p-card__price">
-                <span class="p-card__price-cur">$2,800.00</span>
-                <span class="p-card__price-sub">Valued at $3,100.00</span>
-            </div>
-
-            <div class="p-card__meta">
-                <span class="p-stars" aria-label="4.8 out of 5">
-                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                </span>
-                <a class="p-card__reviews" href="#reviews">10 reviews</a>
-            </div>
-
-            <p class="p-card__desc">
-                This Ale Beer Recipe Kit creates a full bodied, malty beer based on the traditional Oktoberfest style…
-            </p>
-
-            <div class="p-card__purchase">
-                <div class="p-qty" role="group" aria-label="Quantity">
-                    <button class="p-qty__btn" data-act="dec" aria-label="Decrease">−</button>
-                    <input class="p-qty__input" type="number" value="1" min="1" inputmode="numeric">
-                    <button class="p-qty__btn" data-act="inc" aria-label="Increase">+</button>
+        <!-- Right: product card -->
+        <aside class="p-hero__card">
+            <div class="p-card">
+                <div class="p-card__badges">
+                    <span class="badge badge--pill">BEER</span>
+                    <span class="badge badge--sale">SALE</span>
                 </div>
 
-                <button class="p-btn p-btn--primary p-card__add">ADD TO CART</button>
+                <h1 class="p-card__title">Kit Bundle</h1>
 
-                <button class="p-card__icon" aria-label="Save to wishlist">
-                    <i class="fa-regular fa-heart"></i>
-                </button>
-                <button class="p-card__icon" aria-label="Share">
-                    <i class="fa-solid fa-share-nodes"></i>
-                </button>
-            </div>
-
-            <div class="p-card__shipping">
-                Free shipping over $200 · 4 interest-free payments w/ Afterpay
-            </div>
-
-            <!-- Features -->
-            <section class="p-features">
-                <h3 class="p-features__title">FEATURES</h3>
-                <ul class="p-features__list">
-                    <li class="p-feature">
-                        <span class="p-feature__icon"><img src="# alt=""></span>
-                        <span class="p-feature__name">Pale Ale</span>
-                    </li>
-                    <li class="p-feature">
-                        <span class="p-feature__icon"><img src="#" alt=""></span>
-                        <span class="p-feature__name">Newcomer like style</span>
-                    </li>
-                    <li class="p-feature">
-                        <span class="p-feature__icon"><img src="#" alt=""></span>
-                        <span class="p-feature__name">Fruity &amp; Smooth</span>
-                    </li>
-                </ul>
-            </section>
-
-            <!-- Add-ons -->
-            <section class="p-addons">
-                <div class="p-addons__head">
-                    <h3 class="p-addons__title">ADD-ONS</h3>
-                    <button class="p-addons__viewall">View all</button>
+                <div class="p-card__price">
+                    <span class="p-card__price-cur">$2,800.00</span>
+                    <span class="p-card__price-sub">Valued at $3,100.00</span>
                 </div>
 
-                <article class="addon">
-                    <img class="addon__thumb" src="./assets/img/6c5e45dd16bce9e92794f70054516bcb6f500222" alt="">
-                    <div class="addon__info">
-                        <h4 class="addon__name">Bottles</h4>
-                        <div class="addon__price">$55.00</div>
-                        <div class="addon__rating">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <span>(10)</span>
-                        </div>
-                    </div>
-                    <div class="addon__qty">
-                        <button class="p-qty__btn" data-act="dec">−</button>
-                        <input class="p-qty__input" type="number" value="1" min="0">
-                        <button class="p-qty__btn" data-act="inc">+</button>
-                    </div>
-                    <button class="addon__add" aria-label="Add addon"><i class="fa-solid fa-plus"></i></button>
-                </article>
+                <div class="p-card__meta">
+                    <span class="p-stars" aria-label="4.8 out of 5">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </span>
+                    <a class="p-card__reviews" href="#reviews">10 reviews</a>
+                </div>
 
-                <article class="addon">
-                    <img class="addon__thumb" src="./assets/img/6c5e45dd16bce9e92794f70054516bcb6f500222" alt="">
-                    <div class="addon__info">
-                        <h4 class="addon__name">Product name</h4>
-                        <div class="addon__price">$55.00</div>
-                        <div class="addon__rating">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <span>(10)</span>
+                <p class="p-card__desc">
+                    This Ale Beer Recipe Kit creates a full bodied, malty beer based on the traditional Oktoberfest
+                    style…
+                </p>
+
+                <div class="p-card__purchase">
+                    <div class="p-qty" role="group" aria-label="Quantity">
+                        <button class="p-qty__btn" data-act="dec" aria-label="Decrease">−</button>
+                        <input class="p-qty__input" type="number" value="1" min="1" inputmode="numeric">
+                        <button class="p-qty__btn" data-act="inc" aria-label="Increase">+</button>
+                    </div>
+
+                    <button class="p-btn p-btn--primary p-card__add">ADD TO CART</button>
+
+                    <button class="p-card__icon" aria-label="Save to wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <button class="p-card__icon" aria-label="Share">
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </button>
+                </div>
+
+                <div class="p-card__shipping">
+                    Free shipping over $200 · 4 interest-free payments w/ Afterpay
+                </div>
+
+                <!-- Features -->
+                <section class="p-features">
+                    <h3 class="p-features__title">FEATURES</h3>
+                    <ul class="p-features__list">
+                        <li class="p-feature">
+                            <span class="p-feature__icon"><img src="# alt=""></span>
+                        <span class=" p-feature__name">Pale Ale</span>
+                        </li>
+                        <li class="p-feature">
+                            <span class="p-feature__icon"><img src="#" alt=""></span>
+                            <span class="p-feature__name">Newcomer like style</span>
+                        </li>
+                        <li class="p-feature">
+                            <span class="p-feature__icon"><img src="#" alt=""></span>
+                            <span class="p-feature__name">Fruity &amp; Smooth</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Add-ons -->
+                <section class="p-addons">
+                    <div class="p-addons__head">
+                        <h3 class="p-addons__title">ADD-ONS</h3>
+                        <button class="p-addons__viewall">View all</button>
+                    </div>
+
+                    <article class="addon">
+                        <img class="addon__thumb" src="./assets/img/6c5e45dd16bce9e92794f70054516bcb6f500222" alt="">
+                        <div class="addon__info">
+                            <h4 class="addon__name">Bottles</h4>
+                            <div class="addon__price">$55.00</div>
+                            <div class="addon__rating">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <span>(10)</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="addon__qty">
-                        <button class="p-qty__btn" data-act="dec">−</button>
-                        <input class="p-qty__input" type="number" value="1" min="0">
-                        <button class="p-qty__btn" data-act="inc">+</button>
-                    </div>
-                    <button class="addon__add" aria-label="Add addon"><i class="fa-solid fa-plus"></i></button>
-                </article>
-            </section>
-        </div>
-    </aside>
+                        <div class="addon__qty">
+                            <button class="p-qty__btn" data-act="dec">−</button>
+                            <input class="p-qty__input" type="number" value="1" min="0">
+                            <button class="p-qty__btn" data-act="inc">+</button>
+                        </div>
+                        <button class="addon__add" aria-label="Add addon"><i class="fa-solid fa-plus"></i></button>
+                    </article>
+
+                    <article class="addon">
+                        <img class="addon__thumb" src="./assets/img/6c5e45dd16bce9e92794f70054516bcb6f500222" alt="">
+                        <div class="addon__info">
+                            <h4 class="addon__name">Product name</h4>
+                            <div class="addon__price">$55.00</div>
+                            <div class="addon__rating">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <span>(10)</span>
+                            </div>
+                        </div>
+                        <div class="addon__qty">
+                            <button class="p-qty__btn" data-act="dec">−</button>
+                            <input class="p-qty__input" type="number" value="1" min="0">
+                            <button class="p-qty__btn" data-act="inc">+</button>
+                        </div>
+                        <button class="addon__add" aria-label="Add addon"><i class="fa-solid fa-plus"></i></button>
+                    </article>
+                </section>
+            </div>
+        </aside>
+    </section>
+
+
+    <section class="p-tabs" id="product-tabs">
+  <div class="p-tabs__list" role="tablist" aria-label="Product details">
+    <button id="tab-desc"  class="p-tabs__tab is-active" role="tab" aria-selected="true"  aria-controls="panel-desc"  data-target="panel-desc">Descriptions</button>
+    <button id="tab-man"   class="p-tabs__tab" role="tab" aria-selected="false" aria-controls="panel-man"   data-target="panel-man">Manuals</button>
+    <button id="tab-spec"  class="p-tabs__tab" role="tab" aria-selected="false" aria-controls="panel-spec"  data-target="panel-spec">Specifications</button>
+    <button id="tab-inc"   class="p-tabs__tab" role="tab" aria-selected="false" aria-controls="panel-inc"   data-target="panel-inc">What’s Included</button>
+    <button id="tab-rev"   class="p-tabs__tab" role="tab" aria-selected="false" aria-controls="panel-rev"   data-target="panel-rev">Reviews</button>
+  </div>
+
+  <div class="p-tabs__panels">
+    <section id="panel-desc" role="tabpanel" aria-labelledby="tab-desc">
+      <h4>DESCRIPTION:</h4>
+      <p>DESCRIPTION:
+
+The Grainfather G40 brewing system has a bigger capacity and better connectivity. Produce up to 40L (11 US Gal) of beer from one brew. Connect your mobile device to the smart controller with built-in wireless control via the Grainfather App, for step-by-step brewing and access to 1000s of recipes.
+
+You can also transform your G40 into a home distillery* with the G40 and G70 Distilling Lid & Attachment Kits. See our Distilling Equipment category to find the equipment you need to start distilling.</p>
+
+      <h4>FEATURES:</h4>
+      <ul>
+        <li>Sleek 304 grade stainless steel body</li>
+        <li>Connect your mobile device to the smart wireless controller via the Grainfather App and manage your brew remotely
+</li>
+<li>Connect your mobile device to the smart wireless controller via the Grainfather App and manage your brew remotely
+</li>
+      </ul>
+
+      <h4>SHIPPING:</h4>
+      <p>The Grainfather G40 brewing system has a bigger capacity and better connectivity. </p>
+
+      <h4>PAYMENT OPTIONS:</h4>
+      <p>The Grainfather G40 brewing system has a bigger capacity and better connectivity</p>
+    </section>
+
+    <section id="panel-man"  role="tabpanel" aria-labelledby="tab-man"  hidden> <h4>DESCRIPTION:</h4>
+      <p>DESCRIPTION:
+
+The Grainfather G40 brewing system has a bigger capacity and better connectivity. Produce up to 40L (11 US Gal) of beer from one brew. Connect your mobile device to the smart controller with built-in wireless control via the Grainfather App, for step-by-step brewing and access to 1000s of recipes.
+
+You can also transform your G40 into a home distillery* with the G40 and G70 Distilling Lid & Attachment Kits. See our Distilling Equipment category to find the equipment you need to start distilling.</p>
+
+      <h4>FEATURES:</h4>
+      <ul>
+        <li>Sleek 304 grade stainless steel body</li>
+        <li>Connect your mobile device to the smart wireless controller via the Grainfather App and manage your brew remotely
+</li>
+<li>Connect your mobile device to the smart wireless controller via the Grainfather App and manage your brew remotely
+</li>
+      </ul>
+
+      <h4>SHIPPING:</h4>
+      <p>The Grainfather G40 brewing system has a bigger capacity and better connectivity. </p>
+
+      <h4>PAYMENT OPTIONS:</h4>
+      <p>The Grainfather G40 brewing system has a bigger capacity and better connectivity</p>
+    </section></section>
+    <section id="panel-spec" role="tabpanel" aria-labelledby="tab-spec" hidden>…Specifications…</section>
+    <section id="panel-inc"  role="tabpanel" aria-labelledby="tab-inc"  hidden>…What’s Included…</section>
+    <section id="panel-rev"  role="tabpanel" aria-labelledby="tab-rev"  hidden>…Reviews…</section>
+  </div>
 </section>
+
+
+    <section class="brew-flow">
+        <div class="container">
+            <h2 class="brew-flow__title">BREW YOUR OWN BEER</h2>
+
+
+
+            <figure class="brew-flow__art">
+                <img src="./assets/img/image 2.png" alt="Illustration: Brew → Ferment → Bottle → Enjoy">
+            </figure>
+        </div>
+    </section>
+    <section class="howto" id="how-to-brew">
+        <div class="howto__head">
+            <p class="howto__eyebrow">MYO Drinks × GRAINFATHER</p>
+            <h2 class="howto__title">How to brew</h2>
+            <p class="howto__desc">
+                Describe exactly what your product or service does and how it makes customer’s lives
+                better. Avoid using verbose words or phrases.
+            </p>
+            <a class="howto__btn" href="#" download>
+                <img src="./assets/img/icon.png" alt="" aria-hidden="true" />
+                Download our brewing instructions
+            </a>
+        </div>
+
+        <!-- Video thumbnail -->
+        <figure class="howto__video" role="button" aria-label="Play video" tabindex="0">
+            <img class="howto__thumb" src="./assets/img/topic1 (2).jpg" alt="How to brew video" />
+  
+        </figure>
+    </section>
+
+
+    <section class="kv">
+        <div class="kv__wrapper">
+            <!-- Slide 1 -->
+            <div class="kv__slide">
+                <img class="kv__img" src="./assets/img/833df8fc660006dbb7f692f979d5a7c160c99464.png" alt="">
+                <div class="kv__overlay"></div>
+                <div class="kv__content">
+                    <h2 class="kv__title">GOT THE EQUIPMENT?</h2>
+                    <p class="kv__desc">Describe exactly what the company does and what a customer can expect…</p>
+                    <button class="kv__btn">
+                        <img src="./assets/img/Vector.png" alt="">RECIPE BUILDER
+                    </button>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="kv__slide">
+                <img class="kv__img" src="./assets/img/833df8fc660006dbb7f692f979d5a7c160c99464.png" alt="">
+                <div class="kv__overlay"></div>
+                <div class="kv__content">
+                    <h2 class="kv__title">BREW LIKE A PRO</h2>
+                    <p class="kv__desc">Step up your game with our premium brewing kits and recipes…</p>
+                    <button class="kv__btn">
+                        <img src="./assets/img/Vector.png" alt="">RECIPE BUILDER
+                    </button>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="kv__slide">
+                <img class="kv__img" src="./assets/img/833df8fc660006dbb7f692f979d5a7c160c99464.png" alt="">
+                <div class="kv__overlay"></div>
+                <div class="kv__content">
+                    <h2 class="kv__title">JOIN THE COMMUNITY</h2>
+                    <p class="kv__desc">Connect with thousands of homebrewers and share your creations…</p>
+                    <button class="kv__btn">
+                        <img src="./assets/img/Vector.png" alt="">RECIPE BUILDER
+                    </button>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="product-carousel product-carousel--upsell">
+        <header class="product-carousel__header">
+            <h2 class="product-carousel__title">You also might like</h2>
+        </header>
+
+        <div class="product-carousel__viewport">
+            <ul class="product-carousel__list">
+                <li class="product-carousel__item">
+                    <article class="product-card product-card--best-seller">
+                        <div class="product-card__media">
+                            <img class="product-card__img"
+                                src="./assets/img/bb879843ef7b507b36cedc719333efe56de058c6 (1).jpg" alt="...">
+                            <span class="product-card__badge product-card__badge--best-seller">Best seller</span>
+                        </div>
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Home Brew Kit 1</h3>
+
+                            <div class="product-card__price">
+                                <span class="product-card__price-current">$55.00</span>
+                                <span class="product-card__price-old">$65.00</span>
+                            </div>
+
+                            <div class="product-card__rating">
+                                <span class="product-card__stars">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </span>
+                                <span class="product-card__reviews">10 reviews</span>
+                            </div>
+                        </div>
+                        <div class="product-card__actions">
+                            <button class="product-card__btn product-card__btn--add">Add to cart</button>
+                            <button class=" product-card__btn product-card__btn--quickview">Quick view</button>
+
+                        </div>
+                    </article>
+                </li>
+                <li class="product-carousel__item">
+                    <article class="product-card product-card--best-seller">
+                        <div class="product-card__media">
+                            <img class="product-card__img"
+                                src="./assets/img/bb879843ef7b507b36cedc719333efe56de058c6 (1).jpg" alt="...">
+
+                            <span class="product-card__badge product-card__badge--best-seller">Best seller</span>
+                        </div>
+
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Home Brew Kit 1</h3>
+                            <div class="product-card__price">
+                                <span class="product-card__price-current">$55.00</span>
+                                <span class="product-card__price-old">$65.00</span>
+                            </div>
+                            <div class="product-card__rating">
+                                <span class="product-card__stars">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </span>
+                                <span class="product-card__reviews">10 reviews</span>
+                            </div>
+
+                        </div>
+
+                        <div class="product-card__actions">
+                            <button class="product-card__btn product-card__btn--add">Add to cart</button>
+                            <button class=" product-card__btn product-card__btn--quickview">Quick view</button>
+
+                        </div>
+                    </article>
+                </li>
+                <li class="product-carousel__item">
+                    <article class="product-card product-card--best-seller">
+                        <div class="product-card__media">
+                            <img class="product-card__img"
+                                src="./assets/img/bb879843ef7b507b36cedc719333efe56de058c6 (1).jpg" alt="...">
+
+                            <span class="product-card__badge product-card__badge--best-seller">Best seller</span>
+                        </div>
+
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Home Brew Kit 1</h3>
+                            <div class="product-card__price">
+                                <span class="product-card__price-current">$55.00</span>
+                                <span class="product-card__price-old">$65.00</span>
+                            </div>
+                            <div class="product-card__rating">
+                                <span class="product-card__stars">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </span>
+                                <span class="product-card__reviews">10 reviews</span>
+                            </div>
+
+                        </div>
+
+                        <div class="product-card__actions">
+                            <button class="product-card__btn product-card__btn--add">Add to cart</button>
+                            <button class=" product-card__btn product-card__btn--quickview">Quick view</button>
+
+                        </div>
+                    </article>
+                </li>
+                <li class="product-carousel__item">
+                    <article class="product-card product-card--best-seller">
+                        <div class="product-card__media">
+                            <img class="product-card__img"
+                                src="./assets/img/bb879843ef7b507b36cedc719333efe56de058c6 (1).jpg" alt="...">
+
+                            <span class="product-card__badge product-card__badge--best-seller">Best seller</span>
+                        </div>
+
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Home Brew Kit 1</h3>
+                            <div class="product-card__price">
+                                <span class="product-card__price-current">$55.00</span>
+                                <span class="product-card__price-old">$65.00</span>
+                            </div>
+                            <div class="product-card__rating">
+                                <span class="product-card__stars">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </span>
+                                <span class="product-card__reviews">10 reviews</span>
+                            </div>
+
+                        </div>
+
+                        <div class="product-card__actions">
+                            <button class="product-card__btn product-card__btn--add">Add to cart</button>
+                            <button class=" product-card__btn product-card__btn--quickview">Quick view</button>
+
+                        </div>
+                    </article>
+                </li>
+                <li class="product-carousel__item">
+                    <article class="product-card product-card--best-seller">
+                        <div class="product-card__media">
+                            <img class="product-card__img"
+                                src="./assets/img/bb879843ef7b507b36cedc719333efe56de058c6 (1).jpg" alt="...">
+
+                            <span class="product-card__badge product-card__badge--best-seller">Best seller</span>
+                        </div>
+
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Home Brew Kit 1</h3>
+                            <div class="product-card__price">
+                                <span class="product-card__price-current">$55.00</span>
+                                <span class="product-card__price-old">$65.00</span>
+                            </div>
+                            <div class="product-card__rating">
+                                <span class="product-card__stars">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </span>
+                                <span class="product-card__reviews">10 reviews</span>
+                            </div>
+
+                        </div>
+
+                        <div class="product-card__actions">
+                            <button class="product-card__btn product-card__btn--add">Add to cart</button>
+                            <button class=" product-card__btn product-card__btn--quickview">Quick view</button>
+
+                        </div>
+                    </article>
+                </li>
+
+                <li class="product-carousel__item">
+                    <article class="product-card product-card--best-seller">
+                        <div class="product-card__media">
+                            <img class="product-card__img"
+                                src="./assets/img/bb879843ef7b507b36cedc719333efe56de058c6 (1).jpg" alt="...">
+
+                            <span class="product-card__badge product-card__badge--best-seller">Best seller</span>
+                        </div>
+
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Home Brew Kit 1</h3>
+                            <div class="product-card__price">
+                                <span class="product-card__price-current">$55.00</span>
+                                <span class="product-card__price-old">$65.00</span>
+                            </div>
+                            <div class="product-card__rating">
+                                <span class="product-card__stars">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </span>
+                                <span class="product-card__reviews">10 reviews</span>
+                            </div>
+
+                        </div>
+
+                        <div class="product-card__actions">
+                            <button class="product-card__btn product-card__btn--add">Add to cart</button>
+                            <button class=" product-card__btn product-card__btn--quickview">Quick view</button>
+
+                        </div>
+                    </article>
+                </li>
+                <li class="product-carousel__item">
+                    <article class="product-card product-card--best-seller">
+                        <div class="product-card__media">
+                            <img class="product-card__img"
+                                src="./assets/img/bb879843ef7b507b36cedc719333efe56de058c6 (1).jpg" alt="...">
+
+                            <span class="product-card__badge product-card__badge--best-seller">Best seller</span>
+                        </div>
+
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Home Brew Kit 1</h3>
+                            <div class="product-card__price">
+                                <span class="product-card__price-current">$55.00</span>
+                                <span class="product-card__price-old">$65.00</span>
+                            </div>
+                            <div class="product-card__rating">
+                                <span class="product-card__stars">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </span>
+                                <span class="product-card__reviews">10 reviews</span>
+                            </div>
+
+                        </div>
+                        <div class="product-card__actions">
+                            <button class="product-card__btn product-card__btn--add">Add to cart</button>
+                            <button class=" product-card__btn product-card__btn--quickview">Quick view</button>
+
+                        </div>
+                    </article>
+                </li>
+
+            </ul>
+        </div>
+
+    </section>
+
+
+    <section class="product-carousel product-carousel--upsell">
+        <header class="product-carousel__header">
+            <h2 class="product-carousel__title">recently veiweb</h2>
+        </header>
+
+        <div class="product-carousel__viewport">
+            <ul class="product-carousel__list">
+                <li class="product-carousel__item">
+                    <article class="product-card product-card--best-seller">
+                        <div class="product-card__media">
+                            <img class="product-card__img"
+                                src="./assets/img/bb879843ef7b507b36cedc719333efe56de058c6 (1).jpg" alt="...">
+                            <span class="product-card__badge product-card__badge--best-seller">Best seller</span>
+                        </div>
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Home Brew Kit 1</h3>
+
+                            <div class="product-card__price">
+                                <span class="product-card__price-current">$55.00</span>
+                                <span class="product-card__price-old">$65.00</span>
+                            </div>
+
+                            <div class="product-card__rating">
+                                <span class="product-card__stars">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </span>
+                                <span class="product-card__reviews">10 reviews</span>
+                            </div>
+                        </div>
+                        <div class="product-card__actions">
+                            <button class="product-card__btn product-card__btn--add">Add to cart</button>
+                            <button class=" product-card__btn product-card__btn--quickview">Quick view</button>
+
+                        </div>
+                    </article>
+                </li>
+                <li class="product-carousel__item">
+                    <article class="product-card product-card--best-seller">
+                        <div class="product-card__media">
+                            <img class="product-card__img"
+                                src="./assets/img/bb879843ef7b507b36cedc719333efe56de058c6 (1).jpg" alt="...">
+
+                            <span class="product-card__badge product-card__badge--best-seller">Best seller</span>
+                        </div>
+
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Home Brew Kit 1</h3>
+                            <div class="product-card__price">
+                                <span class="product-card__price-current">$55.00</span>
+                                <span class="product-card__price-old">$65.00</span>
+                            </div>
+                            <div class="product-card__rating">
+                                <span class="product-card__stars">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </span>
+                                <span class="product-card__reviews">10 reviews</span>
+                            </div>
+
+                        </div>
+
+                        <div class="product-card__actions">
+                            <button class="product-card__btn product-card__btn--add">Add to cart</button>
+                            <button class=" product-card__btn product-card__btn--quickview">Quick view</button>
+
+                        </div>
+                    </article>
+                </li>
+                <li class="product-carousel__item">
+                    <article class="product-card product-card--best-seller">
+                        <div class="product-card__media">
+                            <img class="product-card__img"
+                                src="./assets/img/bb879843ef7b507b36cedc719333efe56de058c6 (1).jpg" alt="...">
+
+                            <span class="product-card__badge product-card__badge--best-seller">Best seller</span>
+                        </div>
+
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Home Brew Kit 1</h3>
+                            <div class="product-card__price">
+                                <span class="product-card__price-current">$55.00</span>
+                                <span class="product-card__price-old">$65.00</span>
+                            </div>
+                            <div class="product-card__rating">
+                                <span class="product-card__stars">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </span>
+                                <span class="product-card__reviews">10 reviews</span>
+                            </div>
+
+                        </div>
+
+                        <div class="product-card__actions">
+                            <button class="product-card__btn product-card__btn--add">Add to cart</button>
+                            <button class=" product-card__btn product-card__btn--quickview">Quick view</button>
+
+                        </div>
+                    </article>
+                </li>
+                <li class="product-carousel__item">
+                    <article class="product-card product-card--best-seller">
+                        <div class="product-card__media">
+                            <img class="product-card__img"
+                                src="./assets/img/bb879843ef7b507b36cedc719333efe56de058c6 (1).jpg" alt="...">
+
+                            <span class="product-card__badge product-card__badge--best-seller">Best seller</span>
+                        </div>
+
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Home Brew Kit 1</h3>
+                            <div class="product-card__price">
+                                <span class="product-card__price-current">$55.00</span>
+                                <span class="product-card__price-old">$65.00</span>
+                            </div>
+                            <div class="product-card__rating">
+                                <span class="product-card__stars">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </span>
+                                <span class="product-card__reviews">10 reviews</span>
+                            </div>
+
+                        </div>
+
+                        <div class="product-card__actions">
+                            <button class="product-card__btn product-card__btn--add">Add to cart</button>
+                            <button class=" product-card__btn product-card__btn--quickview">Quick view</button>
+
+                        </div>
+                    </article>
+                </li>
+                <li class="product-carousel__item">
+                    <article class="product-card product-card--best-seller">
+                        <div class="product-card__media">
+                            <img class="product-card__img"
+                                src="./assets/img/bb879843ef7b507b36cedc719333efe56de058c6 (1).jpg" alt="...">
+
+                            <span class="product-card__badge product-card__badge--best-seller">Best seller</span>
+                        </div>
+
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Home Brew Kit 1</h3>
+                            <div class="product-card__price">
+                                <span class="product-card__price-current">$55.00</span>
+                                <span class="product-card__price-old">$65.00</span>
+                            </div>
+                            <div class="product-card__rating">
+                                <span class="product-card__stars">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </span>
+                                <span class="product-card__reviews">10 reviews</span>
+                            </div>
+
+                        </div>
+
+                        <div class="product-card__actions">
+                            <button class="product-card__btn product-card__btn--add">Add to cart</button>
+                            <button class=" product-card__btn product-card__btn--quickview">Quick view</button>
+
+                        </div>
+                    </article>
+                </li>
+
+                <li class="product-carousel__item">
+                    <article class="product-card product-card--best-seller">
+                        <div class="product-card__media">
+                            <img class="product-card__img"
+                                src="./assets/img/bb879843ef7b507b36cedc719333efe56de058c6 (1).jpg" alt="...">
+
+                            <span class="product-card__badge product-card__badge--best-seller">Best seller</span>
+                        </div>
+
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Home Brew Kit 1</h3>
+                            <div class="product-card__price">
+                                <span class="product-card__price-current">$55.00</span>
+                                <span class="product-card__price-old">$65.00</span>
+                            </div>
+                            <div class="product-card__rating">
+                                <span class="product-card__stars">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </span>
+                                <span class="product-card__reviews">10 reviews</span>
+                            </div>
+
+                        </div>
+
+                        <div class="product-card__actions">
+                            <button class="product-card__btn product-card__btn--add">Add to cart</button>
+                            <button class=" product-card__btn product-card__btn--quickview">Quick view</button>
+
+                        </div>
+                    </article>
+                </li>
+                <li class="product-carousel__item">
+                    <article class="product-card product-card--best-seller">
+                        <div class="product-card__media">
+                            <img class="product-card__img"
+                                src="./assets/img/bb879843ef7b507b36cedc719333efe56de058c6 (1).jpg" alt="...">
+
+                            <span class="product-card__badge product-card__badge--best-seller">Best seller</span>
+                        </div>
+
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Home Brew Kit 1</h3>
+                            <div class="product-card__price">
+                                <span class="product-card__price-current">$55.00</span>
+                                <span class="product-card__price-old">$65.00</span>
+                            </div>
+                            <div class="product-card__rating">
+                                <span class="product-card__stars">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </span>
+                                <span class="product-card__reviews">10 reviews</span>
+                            </div>
+
+                        </div>
+                        <div class="product-card__actions">
+                            <button class="product-card__btn product-card__btn--add">Add to cart</button>
+                            <button class=" product-card__btn product-card__btn--quickview">Quick view</button>
+
+                        </div>
+                    </article>
+                </li>
+
+            </ul>
+        </div>
+
+    </section>
+
 
     <div data-include="/partials/footer.html"></div>
 
@@ -166,6 +796,7 @@
     <!-- Header/Footer behaviors -->
     <script src="/menu.js"></script>
     <script src="/tab.js"></script>
+    <script src="/slider.js"></script>
 
     <script>
         document.addEventListener('click', e => {
