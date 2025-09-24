@@ -96,3 +96,35 @@ $(function () {
   const targetId = panels.some(p=>p.id===hash) ? hash : firstId;
   activate(targetId);
 })();
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.p-tabs__tab');
+    if (!btn) return;
+
+    // tabs
+    document.querySelectorAll('.p-tabs__tab').forEach(t => {
+      t.classList.toggle('is-active', t === btn);
+      t.setAttribute('aria-selected', t === btn ? 'true' : 'false');
+      t.tabIndex = t === btn ? 0 : -1;
+    });
+
+    // panels
+    const targetId = btn.dataset.target;
+    document.querySelectorAll('.p-tabs [role="tabpanel"]').forEach(p => {
+      p.hidden = p.id !== targetId;
+    });
+  });
+
+  // hỗ trợ bàn phím
+  document.querySelectorAll('.p-tabs__tab').forEach(tab => {
+    tab.addEventListener('keydown', (e) => {
+      if (!['ArrowLeft','ArrowRight','Home','End'].includes(e.key)) return;
+      const tabs = [...document.querySelectorAll('.p-tabs__tab')];
+      let i = tabs.indexOf(e.currentTarget);
+      if (e.key === 'ArrowLeft') i = (i - 1 + tabs.length) % tabs.length;
+      if (e.key === 'ArrowRight') i = (i + 1) % tabs.length;
+      if (e.key === 'Home') i = 0;
+      if (e.key === 'End') i = tabs.length - 1;
+      tabs[i].click();
+      tabs[i].focus();
+    });
+  });

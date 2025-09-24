@@ -11,12 +11,26 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 </head>
 
 
 <body>
     <div data-include="/partials/header.html"></div>
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="breadcrumb__inner">
+            <a class="breadcrumb__link" href="/">Shop all</a>
+            <span class="breadcrumb__sep" aria-hidden="true">›</span>
+
+            <a class="breadcrumb__link" href="/category">Category</a>
+            <span class="breadcrumb__sep" aria-hidden="true">›</span>
+
+            <span class="breadcrumb__current" aria-current="page">Product name</span>
+        </div>
+    </nav>
+
     <section class="p-hero">
         <!-- Left: thumbnails -->
         <aside class="p-hero__thumbs" aria-label="Gallery thumbnails">
@@ -105,119 +119,293 @@
                     </ul>
                 </section>
 
-                <!-- Add-ons -->
-                <section class="p-addons">
-                    <div class="p-addons__head">
-                        <h3 class="p-addons__title">ADD-ONS</h3>
-                        <button class="p-addons__viewall">View all</button>
-                    </div>
 
-                    <article class="addon">
-                        <img class="addon__thumb" src="./assets/img/6c5e45dd16bce9e92794f70054516bcb6f500222" alt="">
-                        <div class="addon__info">
-                            <h4 class="addon__name">Bottles</h4>
-                            <div class="addon__price">$55.00</div>
-                            <div class="addon__rating">
-                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <span>(10)</span>
-                            </div>
-                        </div>
-                        <div class="addon__qty">
-                            <button class="p-qty__btn" data-act="dec">−</button>
-                            <input class="p-qty__input" type="number" value="1" min="0">
-                            <button class="p-qty__btn" data-act="inc">+</button>
-                        </div>
-                        <button class="addon__add" aria-label="Add addon"><i class="fa-solid fa-plus"></i></button>
-                    </article>
-
-                    <article class="addon">
-                        <img class="addon__thumb" src="./assets/img/6c5e45dd16bce9e92794f70054516bcb6f500222" alt="">
-                        <div class="addon__info">
-                            <h4 class="addon__name">Product name</h4>
-                            <div class="addon__price">$55.00</div>
-                            <div class="addon__rating">
-                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <span>(10)</span>
-                            </div>
-                        </div>
-                        <div class="addon__qty">
-                            <button class="p-qty__btn" data-act="dec">−</button>
-                            <input class="p-qty__input" type="number" value="1" min="0">
-                            <button class="p-qty__btn" data-act="inc">+</button>
-                        </div>
-                        <button class="addon__add" aria-label="Add addon"><i class="fa-solid fa-plus"></i></button>
-                    </article>
-                </section>
             </div>
         </aside>
     </section>
 
 
     <section class="p-tabs" id="product-tabs">
-  <div class="p-tabs__list" role="tablist" aria-label="Product details">
-    <button id="tab-desc"  class="p-tabs__tab is-active" role="tab" aria-selected="true"  aria-controls="panel-desc"  data-target="panel-desc">Descriptions</button>
-    <button id="tab-man"   class="p-tabs__tab" role="tab" aria-selected="false" aria-controls="panel-man"   data-target="panel-man">Manuals</button>
-    <button id="tab-spec"  class="p-tabs__tab" role="tab" aria-selected="false" aria-controls="panel-spec"  data-target="panel-spec">Specifications</button>
-    <button id="tab-inc"   class="p-tabs__tab" role="tab" aria-selected="false" aria-controls="panel-inc"   data-target="panel-inc">What’s Included</button>
-    <button id="tab-rev"   class="p-tabs__tab" role="tab" aria-selected="false" aria-controls="panel-rev"   data-target="panel-rev">Reviews</button>
-  </div>
+        <!-- Tabs -->
+        <div class="p-tabs__list" role="tablist" aria-label="Product details">
+            <button id="tab-desc" class="p-tabs__tab is-active" role="tab" aria-selected="true"
+                aria-controls="panel-desc" data-target="panel-desc">Descriptions</button>
+            <button id="tab-man" class="p-tabs__tab" role="tab" aria-selected="false" aria-controls="panel-man"
+                data-target="panel-man">Manuals</button>
+            <button id="tab-spec" class="p-tabs__tab" role="tab" aria-selected="false" aria-controls="panel-spec"
+                data-target="panel-spec">Specifications</button>
+            <button id="tab-inc" class="p-tabs__tab" role="tab" aria-selected="false" aria-controls="panel-inc"
+                data-target="panel-inc">What’s Included</button>
+            <button id="tab-rev" class="p-tabs__tab" role="tab" aria-selected="false" aria-controls="panel-rev"
+                data-target="panel-rev">Reviews</button>
+        </div>
 
-  <div class="p-tabs__panels">
-    <section id="panel-desc" role="tabpanel" aria-labelledby="tab-desc">
-      <h4>DESCRIPTION:</h4>
-      <p>DESCRIPTION:
+        <!-- Panels -->
+        <div class="p-tabs__panels">
+            <!-- Descriptions -->
+            <section id="panel-desc" role="tabpanel" aria-labelledby="tab-desc">
+                <div class="panel-desc-left">
+                    <h4>DESCRIPTION:</h4>
+                    <p>
+                        The Grainfather G40 brewing system has a bigger capacity and better connectivity.
+                        Produce up to 40L (11 US Gal) of beer from one brew. Connect your mobile device to the
+                        smart controller with built-in wireless control via the Grainfather App, for step-by-step
+                        brewing and access to 1000s of recipes.
+                    </p>
+                    <p>
+                        You can also transform your G40 into a home distillery* with the G40 and G70 Distilling
+                        Lid &amp; Attachment Kits. See our Distilling Equipment category to find the equipment
+                        you need to start distilling.
+                    </p>
 
-The Grainfather G40 brewing system has a bigger capacity and better connectivity. Produce up to 40L (11 US Gal) of beer from one brew. Connect your mobile device to the smart controller with built-in wireless control via the Grainfather App, for step-by-step brewing and access to 1000s of recipes.
+                    <h4>SHIPPING:</h4>
+                    <p>
+                        The Grainfather G40 brewing system has a bigger capacity and better connectivity.
+                    </p>
 
-You can also transform your G40 into a home distillery* with the G40 and G70 Distilling Lid & Attachment Kits. See our Distilling Equipment category to find the equipment you need to start distilling.</p>
+                    <h4>PAYMENT OPTIONS:</h4>
+                    <p>
+                        The Grainfather G40 brewing system has a bigger capacity and better connectivity.
+                    </p>
+                </div>
 
-      <h4>FEATURES:</h4>
-      <ul>
-        <li>Sleek 304 grade stainless steel body</li>
-        <li>Connect your mobile device to the smart wireless controller via the Grainfather App and manage your brew remotely
-</li>
-<li>Connect your mobile device to the smart wireless controller via the Grainfather App and manage your brew remotely
-</li>
-      </ul>
+                <div class="panel-desc-right">
+                    <h4>FEATURES:</h4>
+                    <ul>
+                        <li>Sleek 304 grade stainless steel body</li>
+                        <li>Heats wort evenly with large, surface mounted heating elements</li>
+                        <li>Connect your mobile device to the smart wireless controller via the Grainfather App and
+                            manage your brew remotely</li>
+                        <li>Conical base for maximum wort transfer</li>
+                        <li>Efficient and sanitary brew transfer with the counterflow wort chiller</li>
+                        <li>PID heating control for accurate temperature management during mashing</li>
+                        <li>Quick and easy cleaning with CIP (clean in place) capability</li>
+                        <li>Integrated sight glass for easy volume reading</li>
+                        <li>Compatible with the G40 and G70 Distilling Lid &amp; Attachment Kits – see our Distilling
+                            Equipment category</li>
+                        <li>Rolled edge mash plate and large hop filter to reduce blockages</li>
+                        <li>Compatible with 10 and 15 amp modes (15 amp NZ/AU only)</li>
+                        <li>Backed by a 3-year warranty</li>
+                    </ul>
+                    <p class="feature-note">
+                        *Legal Considerations: Distilling at home is legal in New Zealand.
+                        Check the laws in your country or state before you get started.
+                    </p>
+                </div>
+            </section>
 
-      <h4>SHIPPING:</h4>
-      <p>The Grainfather G40 brewing system has a bigger capacity and better connectivity. </p>
+            <!-- Manuals -->
+            <section id="panel-man" role="tabpanel" aria-labelledby="tab-man" hidden>
+                <div class="panel-desc-left">
+                    <h4>DESCRIPTION:</h4>
+                    <p>
+                        The Grainfather G40 brewing system has a bigger capacity and better connectivity.
+                        Produce up to 40L (11 US Gal) of beer from one brew. Connect your mobile device to the
+                        smart controller with built-in wireless control via the Grainfather App, for step-by-step
+                        brewing and access to 1000s of recipes.
+                    </p>
+                    <p>
+                        You can also transform your G40 into a home distillery* with the G40 and G70 Distilling
+                        Lid &amp; Attachment Kits. See our Distilling Equipment category to find the equipment
+                        you need to start distilling.
+                    </p>
 
-      <h4>PAYMENT OPTIONS:</h4>
-      <p>The Grainfather G40 brewing system has a bigger capacity and better connectivity</p>
+                    <h4>SHIPPING:</h4>
+                    <p>
+                        The Grainfather G40 brewing system has a bigger capacity and better connectivity.
+                    </p>
+
+                    <h4>PAYMENT OPTIONS:</h4>
+                    <p>
+                        The Grainfather G40 brewing system has a bigger capacity and better connectivity.
+                    </p>
+                </div>
+
+                <div class="panel-desc-right">
+                    <h4>FEATURES:</h4>
+                    <ul>
+                        <li>Sleek 304 grade stainless steel body</li>
+                        <li>Heats wort evenly with large, surface mounted heating elements</li>
+                        <li>Connect your mobile device to the smart wireless controller via the Grainfather App and
+                            manage your brew remotely</li>
+                        <li>Conical base for maximum wort transfer</li>
+                        <li>Efficient and sanitary brew transfer with the counterflow wort chiller</li>
+                        <li>PID heating control for accurate temperature management during mashing</li>
+                        <li>Quick and easy cleaning with CIP (clean in place) capability</li>
+                        <li>Integrated sight glass for easy volume reading</li>
+                        <li>Compatible with the G40 and G70 Distilling Lid &amp; Attachment Kits – see our Distilling
+                            Equipment category</li>
+                        <li>Rolled edge mash plate and large hop filter to reduce blockages</li>
+                        <li>Compatible with 10 and 15 amp modes (15 amp NZ/AU only)</li>
+                        <li>Backed by a 3-year warranty</li>
+                    </ul>
+                    <p class="feature-note">
+                        *Legal Considerations: Distilling at home is legal in New Zealand.
+                        Check the laws in your country or state before you get started.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Specifications -->
+            <section id="panel-spec" role="tabpanel" aria-labelledby="tab-spec" hidden>
+                <div class="panel-desc-left">
+                    <h4>DESCRIPTION:</h4>
+                    <p>
+                        The Grainfather G40 brewing system has a bigger capacity and better connectivity.
+                        Produce up to 40L (11 US Gal) of beer from one brew. Connect your mobile device to the
+                        smart controller with built-in wireless control via the Grainfather App, for step-by-step
+                        brewing and access to 1000s of recipes.
+                    </p>
+                    <p>
+                        You can also transform your G40 into a home distillery* with the G40 and G70 Distilling
+                        Lid &amp; Attachment Kits. See our Distilling Equipment category to find the equipment
+                        you need to start distilling.
+                    </p>
+
+                    <h4>SHIPPING:</h4>
+                    <p>
+                        The Grainfather G40 brewing system has a bigger capacity and better connectivity.
+                    </p>
+
+                    <h4>PAYMENT OPTIONS:</h4>
+                    <p>
+                        The Grainfather G40 brewing system has a bigger capacity and better connectivity.
+                    </p>
+                </div>
+
+                <div class="panel-desc-right">
+                    <h4>FEATURES:</h4>
+                    <ul>
+                        <li>Sleek 304 grade stainless steel body</li>
+                        <li>Heats wort evenly with large, surface mounted heating elements</li>
+                        <li>Connect your mobile device to the smart wireless controller via the Grainfather App and
+                            manage your brew remotely</li>
+                        <li>Conical base for maximum wort transfer</li>
+                        <li>Efficient and sanitary brew transfer with the counterflow wort chiller</li>
+                        <li>PID heating control for accurate temperature management during mashing</li>
+                        <li>Quick and easy cleaning with CIP (clean in place) capability</li>
+                        <li>Integrated sight glass for easy volume reading</li>
+                        <li>Compatible with the G40 and G70 Distilling Lid &amp; Attachment Kits – see our Distilling
+                            Equipment category</li>
+                        <li>Rolled edge mash plate and large hop filter to reduce blockages</li>
+                        <li>Compatible with 10 and 15 amp modes (15 amp NZ/AU only)</li>
+                        <li>Backed by a 3-year warranty</li>
+                    </ul>
+                    <p class="feature-note">
+                        *Legal Considerations: Distilling at home is legal in New Zealand.
+                        Check the laws in your country or state before you get started.
+                    </p>
+                </div>
+            </section>
+
+            <!-- What’s Included -->
+            <section id="panel-inc" role="tabpanel" aria-labelledby="tab-inc" hidden>
+                <div class="panel-desc-left">
+                    <h4>DESCRIPTION:</h4>
+                    <p>
+                        The Grainfather G40 brewing system has a bigger capacity and better connectivity.
+                        Produce up to 40L (11 US Gal) of beer from one brew. Connect your mobile device to the
+                        smart controller with built-in wireless control via the Grainfather App, for step-by-step
+                        brewing and access to 1000s of recipes.
+                    </p>
+                    <p>
+                        You can also transform your G40 into a home distillery* with the G40 and G70 Distilling
+                        Lid &amp; Attachment Kits. See our Distilling Equipment category to find the equipment
+                        you need to start distilling.
+                    </p>
+
+                    <h4>SHIPPING:</h4>
+                    <p>
+                        The Grainfather G40 brewing system has a bigger capacity and better connectivity.
+                    </p>
+
+                    <h4>PAYMENT OPTIONS:</h4>
+                    <p>
+                        The Grainfather G40 brewing system has a bigger capacity and better connectivity.
+                    </p>
+                </div>
+
+                <div class="panel-desc-right">
+                    <h4>FEATURES:</h4>
+                    <ul>
+                        <li>Sleek 304 grade stainless steel body</li>
+                        <li>Heats wort evenly with large, surface mounted heating elements</li>
+                        <li>Connect your mobile device to the smart wireless controller via the Grainfather App and
+                            manage your brew remotely</li>
+                        <li>Conical base for maximum wort transfer</li>
+                        <li>Efficient and sanitary brew transfer with the counterflow wort chiller</li>
+                        <li>PID heating control for accurate temperature management during mashing</li>
+                        <li>Quick and easy cleaning with CIP (clean in place) capability</li>
+                        <li>Integrated sight glass for easy volume reading</li>
+                        <li>Compatible with the G40 and G70 Distilling Lid &amp; Attachment Kits – see our Distilling
+                            Equipment category</li>
+                        <li>Rolled edge mash plate and large hop filter to reduce blockages</li>
+                        <li>Compatible with 10 and 15 amp modes (15 amp NZ/AU only)</li>
+                        <li>Backed by a 3-year warranty</li>
+                    </ul>
+                    <p class="feature-note">
+                        *Legal Considerations: Distilling at home is legal in New Zealand.
+                        Check the laws in your country or state before you get started.
+                    </p>
+                </div>
+            </section>
+            <!-- Reviews -->
+            <section id="panel-rev" role="tabpanel" aria-labelledby="tab-rev" hidden>
+                 <div class="panel-desc-left">
+                    <h4>DESCRIPTION:</h4>
+                    <p>
+                        The Grainfather G40 brewing system has a bigger capacity and better connectivity.
+                        Produce up to 40L (11 US Gal) of beer from one brew. Connect your mobile device to the
+                        smart controller with built-in wireless control via the Grainfather App, for step-by-step
+                        brewing and access to 1000s of recipes.
+                    </p>
+                    <p>
+                        You can also transform your G40 into a home distillery* with the G40 and G70 Distilling
+                        Lid &amp; Attachment Kits. See our Distilling Equipment category to find the equipment
+                        you need to start distilling.
+                    </p>
+
+                    <h4>SHIPPING:</h4>
+                    <p>
+                        The Grainfather G40 brewing system has a bigger capacity and better connectivity.
+                    </p>
+
+                    <h4>PAYMENT OPTIONS:</h4>
+                    <p>
+                        The Grainfather G40 brewing system has a bigger capacity and better connectivity.
+                    </p>
+                </div>
+
+                <div class="panel-desc-right">
+                    <h4>FEATURES:</h4>
+                    <ul>
+                        <li>Sleek 304 grade stainless steel body</li>
+                        <li>Heats wort evenly with large, surface mounted heating elements</li>
+                        <li>Connect your mobile device to the smart wireless controller via the Grainfather App and
+                            manage your brew remotely</li>
+                        <li>Conical base for maximum wort transfer</li>
+                        <li>Efficient and sanitary brew transfer with the counterflow wort chiller</li>
+                        <li>PID heating control for accurate temperature management during mashing</li>
+                        <li>Quick and easy cleaning with CIP (clean in place) capability</li>
+                        <li>Integrated sight glass for easy volume reading</li>
+                        <li>Compatible with the G40 and G70 Distilling Lid &amp; Attachment Kits – see our Distilling
+                            Equipment category</li>
+                        <li>Rolled edge mash plate and large hop filter to reduce blockages</li>
+                        <li>Compatible with 10 and 15 amp modes (15 amp NZ/AU only)</li>
+                        <li>Backed by a 3-year warranty</li>
+                    </ul>
+                    <p class="feature-note">
+                        *Legal Considerations: Distilling at home is legal in New Zealand.
+                        Check the laws in your country or state before you get started.
+                    </p>
+                </div>
+        </div>
     </section>
-
-    <section id="panel-man"  role="tabpanel" aria-labelledby="tab-man"  hidden> <h4>DESCRIPTION:</h4>
-      <p>DESCRIPTION:
-
-The Grainfather G40 brewing system has a bigger capacity and better connectivity. Produce up to 40L (11 US Gal) of beer from one brew. Connect your mobile device to the smart controller with built-in wireless control via the Grainfather App, for step-by-step brewing and access to 1000s of recipes.
-
-You can also transform your G40 into a home distillery* with the G40 and G70 Distilling Lid & Attachment Kits. See our Distilling Equipment category to find the equipment you need to start distilling.</p>
-
-      <h4>FEATURES:</h4>
-      <ul>
-        <li>Sleek 304 grade stainless steel body</li>
-        <li>Connect your mobile device to the smart wireless controller via the Grainfather App and manage your brew remotely
-</li>
-<li>Connect your mobile device to the smart wireless controller via the Grainfather App and manage your brew remotely
-</li>
-      </ul>
-
-      <h4>SHIPPING:</h4>
-      <p>The Grainfather G40 brewing system has a bigger capacity and better connectivity. </p>
-
-      <h4>PAYMENT OPTIONS:</h4>
-      <p>The Grainfather G40 brewing system has a bigger capacity and better connectivity</p>
-    </section></section>
     <section id="panel-spec" role="tabpanel" aria-labelledby="tab-spec" hidden>…Specifications…</section>
-    <section id="panel-inc"  role="tabpanel" aria-labelledby="tab-inc"  hidden>…What’s Included…</section>
-    <section id="panel-rev"  role="tabpanel" aria-labelledby="tab-rev"  hidden>…Reviews…</section>
-  </div>
-</section>
+    <section id="panel-inc" role="tabpanel" aria-labelledby="tab-inc" hidden>…What’s Included…</section>
+    <section id="panel-rev" role="tabpanel" aria-labelledby="tab-rev" hidden>…Reviews…</section>
+    </div>
+    </section>
 
 
     <section class="brew-flow">
@@ -248,7 +436,7 @@ You can also transform your G40 into a home distillery* with the G40 and G70 Dis
         <!-- Video thumbnail -->
         <figure class="howto__video" role="button" aria-label="Play video" tabindex="0">
             <img class="howto__thumb" src="./assets/img/topic1 (2).jpg" alt="How to brew video" />
-  
+
         </figure>
     </section>
 
@@ -261,7 +449,8 @@ You can also transform your G40 into a home distillery* with the G40 and G70 Dis
                 <div class="kv__overlay"></div>
                 <div class="kv__content">
                     <h2 class="kv__title">GOT THE EQUIPMENT?</h2>
-                    <p class="kv__desc">Describe exactly what the company does and what a customer can expect…</p>
+                    <p class="kv__desc">Describe exactly what the company does and what a customer can expect
+                        when working with the company. Avoid using verbose words or phrases.</p>
                     <button class="kv__btn">
                         <img src="./assets/img/Vector.png" alt="">RECIPE BUILDER
                     </button>
@@ -273,8 +462,9 @@ You can also transform your G40 into a home distillery* with the G40 and G70 Dis
                 <img class="kv__img" src="./assets/img/833df8fc660006dbb7f692f979d5a7c160c99464.png" alt="">
                 <div class="kv__overlay"></div>
                 <div class="kv__content">
-                    <h2 class="kv__title">BREW LIKE A PRO</h2>
-                    <p class="kv__desc">Step up your game with our premium brewing kits and recipes…</p>
+                    <h2 class="kv__title">GOT THE EQUIPMENT?</h2>
+                    <p class="kv__desc">Describe exactly what the company does and what a customer can expect
+                        when working with the company. Avoid using verbose words or phrases.</p>
                     <button class="kv__btn">
                         <img src="./assets/img/Vector.png" alt="">RECIPE BUILDER
                     </button>
@@ -286,8 +476,9 @@ You can also transform your G40 into a home distillery* with the G40 and G70 Dis
                 <img class="kv__img" src="./assets/img/833df8fc660006dbb7f692f979d5a7c160c99464.png" alt="">
                 <div class="kv__overlay"></div>
                 <div class="kv__content">
-                    <h2 class="kv__title">JOIN THE COMMUNITY</h2>
-                    <p class="kv__desc">Connect with thousands of homebrewers and share your creations…</p>
+                    <h2 class="kv__title">GOT THE EQUIPMENT?</h2>
+                    <p class="kv__desc">Describe exactly what the company does and what a customer can expect
+                        when working with the company. Avoid using verbose words or phrases.</p>
                     <button class="kv__btn">
                         <img src="./assets/img/Vector.png" alt="">RECIPE BUILDER
                     </button>

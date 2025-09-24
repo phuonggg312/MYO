@@ -110,16 +110,18 @@
 .category {
   padding: 28px 0 24px;
 
-  .cate-tt {
-    @extend %section-title;
-    font-family: "Mango Grotesque", sans-serif;
-    font-size: 64px;
-    line-height: 1.2;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: v.$color-ink;
-    margin: 0 0 6px;
-  }
+.cate-tt {
+  @extend %section-title;
+  font-family: "Mango Grotesque";
+  font-weight: 700; // gọi đúng bản Bold
+  font-size: 64px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: v.$color-ink;
+  margin: 0 0 6px;
+}
+
 
   .cate-desc {
     @extend %section-subtitle;
@@ -242,7 +244,7 @@
     }
 
     .cate-title {
-      font-family: v.$font-heading;
+      font-family: "Mango Grotesque Bold";
       font-size: 16px;
       font-weight: 800;
       color: v.$color-ink;
@@ -646,9 +648,9 @@
 
   .brew-tt {
     @extend %section-title;
-    margin-top: 20px;
-    color: #20222a;
-    font-size: clamp(64px, 3.2vw, 42px);
+  margin-top: 20px;
+  color: #20222a;
+  font-size: clamp(64px, 3.2vw, 64px);
   }
 
   .brew-sub {

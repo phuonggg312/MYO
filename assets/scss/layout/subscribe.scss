@@ -2,23 +2,22 @@
 
 .subscribes {
   background: v.$color-subscribe;
-  padding: 55px 18px;
+  padding: 58px 0px;
 
   .sub-tt{
     margin: 0 0 8px;
-    font-family: v.$font-heading;
+    font-family: v.$font-body;
     font-weight: 700;          
-    font-size: 28px;
+    font-size: 24px;
     color: v.$color-ink;
   }
 
   .sub-ct{
     margin: 0;
     font-family: v.$font-body;
-    font-size: v.$fs-base;
-    line-height: 1.6;
+    font-size: 18px;
     color: rgba(v.$color-ink,.9);
-    max-width: 560px;
+    max-width: 500px;
   }
 
   .sub-form{
@@ -33,8 +32,8 @@
     flex: 1;
     height: 44px;
     padding: 0 14px;
-    border: 1px solid rgba(0,0,0,.15);
-    border-radius: 999px;
+    border: 1px solid rgba(3, 3, 3, 0.906);
+    border-radius: 12px;
     background: #fff;
     font-family: v.$font-body;
     font-size: v.$fs-base;
@@ -47,7 +46,7 @@
     height: 44px;
     padding: 0 16px;
     border: 0;
-    border-radius: 999px;
+    border-radius: 12px;
     background: v.$color-pill;
     color: v.$color-white;
     font-family: v.$font-body;

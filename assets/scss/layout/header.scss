@@ -17,7 +17,7 @@
         font-size: 16px;
         padding: 12px 12px;
         line-height: 100%;
-        font-weight: 400;
+        font-weight: 600;
         text-align: center  ;
         justify-content: center;
         gap: 8px;
@@ -60,7 +60,7 @@
             padding-top: 5px;
             padding-left: 45px;
             height: 48px;
-            width: 250px;
+            width: 258px;
             display: block;
         }
 
@@ -74,29 +74,32 @@
                 background: $color-pill;
                 height: 40px;
                 width: 120px;
+                margin-left: 3px;
                 color: $color-white;
                 border: 0;
                 border-radius: 12px 12px 0 12px;
                 padding: 8px 19px;
-                font-family: $font-heading;
+                font-family: $font-body;
                 font-size: 14px;
-                font-weight: 700;
+                font-weight: 500;
                 cursor: pointer;
                 display: inline-flex;
                 align-items: center;
-                gap: 6px;
+                gap: 12px;
 
                 i {
-                    font-size: 10px;
+                    font-size: 11px;
                 }
             }
 
             .search_input {
                 background-color: $color-muted;
                 flex: 1;
+                margin-right: 5px;
+                font-weight: 500;
                 border: none;
                 border-bottom: 2px solid $color-line;
-                padding: 10px 16px;
+                padding: 10px 17px;
                 outline: none;
                 font-family: $font-body;
                 font-size: 14px;
@@ -105,8 +108,8 @@
 
             .search_btn {
                 position: absolute;
-                right: 20px;
-                bottom: 8px;
+                right: 23px;
+                bottom: 5px;
                 border: 0;
                 background: transparent;
                 cursor: pointer;
@@ -122,12 +125,13 @@
         .currency {
             background: transparent;
             border: 0;
-            padding-right: 10px;
-            padding-left:25px;
+            padding-right: 16px;
+            padding-left:18px;
             font-family: $font-body;
-            font-weight: 500;
+            font-weight: 400;
             font-size: $fs-sm;
             display: flex;
+            font-size: 14px;
             align-items: center;
             gap: 6px;
             cursor: pointer;
@@ -141,7 +145,7 @@
         /* action icons */
         .action {
             display: flex;
-            gap: 20px;
+            gap: 32px;
 
             a {
                 color: $color-icon;
@@ -162,7 +166,7 @@
         justify-content: space-between;
         align-items: center;
         border-bottom: 1px solid $color-line;
-        padding: 8px 18px;
+        padding: 8px 24px;
         
 
         .header-nav ul {
@@ -178,7 +182,7 @@
 
         .header-nav ul li {
 
-            font-family: $font-heading;
+            font-family: $font-body;
             font-weight: 600;
             font-size: 17px;
             color: $color-ink;
@@ -239,7 +243,7 @@
             .action {
                 grid-area: action;
                 justify-self: end;
-                gap: 12px;
+                gap: 32px;
             }
 
             .search {

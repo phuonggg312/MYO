@@ -10,7 +10,7 @@
 
 .category .cate-desc, .brew-sec .brew-sub, .resources-sec .rs-eyebrow, .resources-sec .rs-sub, .testimonials .t-desc {
   text-align: center;
-  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  font-family: "Inter", "San Francisco", "Inter", Arial, sans-serif;
   color: rgba(32, 34, 42, 0.75);
 }
 
@@ -27,16 +27,18 @@
   cursor: pointer;
 }
 
+/* Regular 400 */
 @font-face {
   font-family: "Mango Grotesque";
-  src: url("../fonts/mango_grotesque/MangoGrotesque-Regular.otf") format("opentype");
+  src: url("../fonts/mango_grotesque/MangoGrotesque/Web-TT/MangoGrotesque-Regular.woff2") format("woff2"), url("../fonts/mango_grotesque/MangoGrotesque/Web-TT/MangoGrotesque-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
+/* Bold 700 */
 @font-face {
   font-family: "Mango Grotesque";
-  src: url("../fonts/mango_grotesque/MangoGrotesque-Bold.otf") format("opentype");
+  src: url("../fonts/mango_grotesque/MangoGrotesque/Web-TT/MangoGrotesque-Bold.woff2") format("woff2"), url("../fonts/mango_grotesque/MangoGrotesque/Web-TT/MangoGrotesque-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -46,7 +48,7 @@
    ========================================= */
 .header {
   background: #f5f4f0;
-  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  font-family: "Inter", "San Francisco", "Inter", Arial, sans-serif;
   /* Promo bar */
 }
 .header .promo-bar {
@@ -58,7 +60,7 @@
   font-size: 16px;
   padding: 12px 12px;
   line-height: 100%;
-  font-weight: 400;
+  font-weight: 600;
   text-align: center;
   justify-content: center;
   gap: 8px;
@@ -102,7 +104,7 @@
   padding-top: 5px;
   padding-left: 45px;
   height: 48px;
-  width: 250px;
+  width: 258px;
   display: block;
 }
 .header .header_top .search {
@@ -115,36 +117,39 @@
   background: #393D47;
   height: 40px;
   width: 120px;
+  margin-left: 3px;
   color: #ffffff;
   border: 0;
   border-radius: 12px 12px 0 12px;
   padding: 8px 19px;
-  font-family: "Mango Grotesque", "Oswald", sans-serif;
+  font-family: "Inter", "San Francisco", "Inter", Arial, sans-serif;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 500;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 12px;
 }
 .header .header_top .search .search_mode i {
-  font-size: 10px;
+  font-size: 11px;
 }
 .header .header_top .search .search_input {
   background-color: #f5f4f0;
   flex: 1;
+  margin-right: 5px;
+  font-weight: 500;
   border: none;
   border-bottom: 2px solid #dcdcdc;
-  padding: 10px 16px;
+  padding: 10px 17px;
   outline: none;
-  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  font-family: "Inter", "San Francisco", "Inter", Arial, sans-serif;
   font-size: 14px;
   text-transform: uppercase;
 }
 .header .header_top .search .search_btn {
   position: absolute;
-  right: 20px;
-  bottom: 8px;
+  right: 23px;
+  bottom: 5px;
   border: 0;
   background: transparent;
   cursor: pointer;
@@ -159,12 +164,13 @@
 .header .header_top .currency {
   background: transparent;
   border: 0;
-  padding-right: 10px;
-  padding-left: 25px;
-  font-family: "San Francisco", "Inter", Arial, sans-serif;
-  font-weight: 500;
+  padding-right: 16px;
+  padding-left: 18px;
+  font-family: "Inter", "San Francisco", "Inter", Arial, sans-serif;
+  font-weight: 400;
   font-size: 14px;
   display: flex;
+  font-size: 14px;
   align-items: center;
   gap: 6px;
   cursor: pointer;
@@ -178,7 +184,7 @@
 }
 .header .header_top .action {
   display: flex;
-  gap: 20px;
+  gap: 32px;
 }
 .header .header_top .action a {
   color: #6C707A;
@@ -197,7 +203,7 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #dcdcdc;
-  padding: 8px 18px;
+  padding: 8px 24px;
 }
 .header .header_bot .header-nav ul {
   display: flex;
@@ -208,7 +214,7 @@
   padding-left: 8.5%;
 }
 .header .header_bot .header-nav ul li {
-  font-family: "Mango Grotesque", "Oswald", sans-serif;
+  font-family: "Inter", "San Francisco", "Inter", Arial, sans-serif;
   font-weight: 600;
   font-size: 17px;
   color: #20222a;
@@ -224,7 +230,7 @@
   padding: 6px 27px;
   margin-right: 39px;
   border-radius: 16px;
-  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  font-family: "Inter", "San Francisco", "Inter", Arial, sans-serif;
   font-size: 14px;
   font-weight: 600;
 }
@@ -258,7 +264,7 @@
   .header .header_top .action {
     grid-area: action;
     justify-self: end;
-    gap: 12px;
+    gap: 32px;
   }
   .header .header_top .search {
     grid-area: search;
@@ -533,22 +539,21 @@
 }
 .subscribes {
   background: #eedac3;
-  padding: 55px 18px;
+  padding: 58px 0px;
 }
 .subscribes .sub-tt {
   margin: 0 0 8px;
-  font-family: "Mango Grotesque", "Oswald", sans-serif;
+  font-family: "Inter", "San Francisco", "Inter", Arial, sans-serif;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 24px;
   color: #20222a;
 }
 .subscribes .sub-ct {
   margin: 0;
-  font-family: "San Francisco", "Inter", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
+  font-family: "Inter", "San Francisco", "Inter", Arial, sans-serif;
+  font-size: 18px;
   color: rgba(32, 34, 42, 0.9);
-  max-width: 560px;
+  max-width: 500px;
 }
 .subscribes .sub-form {
   display: flex;
@@ -561,10 +566,10 @@
   flex: 1;
   height: 44px;
   padding: 0 14px;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 999px;
+  border: 1px solid rgba(3, 3, 3, 0.906);
+  border-radius: 12px;
   background: #fff;
-  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  font-family: "Inter", "San Francisco", "Inter", Arial, sans-serif;
   font-size: 16px;
   outline: none;
 }
@@ -572,10 +577,10 @@
   height: 44px;
   padding: 0 16px;
   border: 0;
-  border-radius: 999px;
+  border-radius: 12px;
   background: #393D47;
   color: #ffffff;
-  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  font-family: "Inter", "San Francisco", "Inter", Arial, sans-serif;
   font-weight: 700;
   white-space: nowrap;
   cursor: pointer;
@@ -584,7 +589,7 @@
   margin: 10px 0 0;
   max-width: 560px;
   margin-left: auto;
-  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  font-family: "Inter", "San Francisco", "Inter", Arial, sans-serif;
   font-size: 12px;
   color: rgba(0, 0, 0, 0.6);
   line-height: 1.5;
@@ -603,11 +608,11 @@
 .site-footer {
   background: #393D47;
   color: #ffffff;
-  font-family: "San Francisco", "Inter", Arial, sans-serif;
-  padding: 100px 20px 40px;
+  font-family: "Inter", "San Francisco", "Inter", Arial, sans-serif;
+  padding: 85px 20px 40px;
 }
 .site-footer .logo_t img {
-  height: 120px;
+  height: 154px;
   width: auto;
   display: block;
 }
@@ -618,7 +623,7 @@
 }
 .site-footer .social-links a {
   color: #ffffff;
-  font-size: 18px;
+  font-size: 40px;
   text-decoration: none;
 }
 .site-footer .footer-title {
@@ -806,7 +811,7 @@
   margin-left: 30px;
 }
 .hero-section .hero-ct .hero-desc {
-  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  font-family: "Inter", "San Francisco", "Inter", Arial, sans-serif;
   font-size: 18px;
   margin: 0;
   margin-left: 30px;
@@ -818,7 +823,8 @@
   padding: 28px 0 24px;
 }
 .category .cate-tt {
-  font-family: "Mango Grotesque", sans-serif;
+  font-family: "Mango Grotesque";
+  font-weight: 700;
   font-size: 64px;
   line-height: 1.2;
   letter-spacing: 0.03em;
@@ -844,7 +850,7 @@
 }
 .category .cate-nav .cate-pill {
   border: none;
-  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  font-family: "Inter", "San Francisco", "Inter", Arial, sans-serif;
   font-size: 14px;
   color: #20222a;
   padding: 6px 14px;
@@ -953,7 +959,7 @@
   filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.12));
 }
 .category .cate-card .cate-title {
-  font-family: "Mango Grotesque", "Oswald", sans-serif;
+  font-family: "Mango Grotesque Bold";
   font-size: 16px;
   font-weight: 800;
   color: #20222a;
@@ -961,7 +967,7 @@
   text-transform: uppercase;
 }
 .category .cate-card .cate-description {
-  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  font-family: "Inter", "San Francisco", "Inter", Arial, sans-serif;
   font-size: 12px;
   color: rgba(0, 0, 0, 0.65);
   line-height: 1.45;
@@ -981,7 +987,7 @@
   border: 0;
   border-radius: 999px;
   padding: 8px 16px;
-  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  font-family: "Inter", "San Francisco", "Inter", Arial, sans-serif;
   font-weight: 700;
   font-size: 13px;
   cursor: pointer;
@@ -1207,7 +1213,7 @@
   border: 0;
   border-radius: 999px;
   padding: 10px 14px;
-  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  font-family: "Inter", "San Francisco", "Inter", Arial, sans-serif;
   font-weight: 700;
   font-size: 13px;
   cursor: pointer;
@@ -1250,7 +1256,7 @@
 }
 .topics--mb .cate-desc {
   text-align: center;
-  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  font-family: "Inter", "San Francisco", "Inter", Arial, sans-serif;
   color: rgba(32, 34, 42, 0.75);
   margin: 0 0 14px;
 }
@@ -1309,7 +1315,7 @@
   border: 0;
   border-radius: 999px;
   padding: 12px 16px;
-  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  font-family: "Inter", "San Francisco", "Inter", Arial, sans-serif;
   font-weight: 700;
   font-size: 14px;
   cursor: pointer;
@@ -1330,7 +1336,7 @@
 .brew-sec .brew-tt {
   margin-top: 20px;
   color: #20222a;
-  font-size: clamp(64px, 3.2vw, 42px);
+  font-size: clamp(64px, 3.2vw, 64px);
 }
 .brew-sec .brew-sub {
   margin: 6px 0 12px;
@@ -1527,7 +1533,7 @@
 .p-card .p-title {
   margin: 2px 0 0;
   font-size: 14px;
-  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  font-family: "Inter", "San Francisco", "Inter", Arial, sans-serif;
 }
 .p-card .p-title a {
   color: #20222a;
@@ -1687,7 +1693,7 @@
 }
 .resources-sec .tag {
   display: inline-block;
-  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  font-family: "Inter", "San Francisco", "Inter", Arial, sans-serif;
   font-size: 11px;
   padding: 4px 15px;
   border-radius: 20px 20px 0 0;
@@ -1721,7 +1727,7 @@
   align-items: center;
   color: rgba(32, 34, 42, 0.65);
   font-size: 12px;
-  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  font-family: "Inter", "San Francisco", "Inter", Arial, sans-serif;
 }
 .resources-sec .meta .dot {
   opacity: 0.5;
@@ -1729,7 +1735,7 @@
 .resources-sec .featured {
   padding-top: 18px;
   font-size: 20px;
-  font-size: "San Francisco", "Inter", Arial, sans-serif;
+  font-size: "Inter", "San Francisco", "Inter", Arial, sans-serif;
   font-weight: 500;
 }
 .resources-sec .rs-featured .thumb {
@@ -1776,7 +1782,7 @@
 .resources-sec .rs-featured .excerpt {
   margin: 0 0 8px;
   color: rgba(32, 34, 42, 0.9);
-  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  font-family: "Inter", "San Francisco", "Inter", Arial, sans-serif;
 }
 .resources-sec .rs-list {
   list-style: none;
@@ -1817,7 +1823,7 @@
   border: 1px solid #20222a;
   color: #20222a;
   text-decoration: none;
-  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  font-family: "Inter", "San Francisco", "Inter", Arial, sans-serif;
 }
 .resources-sec .rs-more:hover {
   background: #393D47;
@@ -1873,14 +1879,14 @@
   color: #f5a623;
 }
 .testimonials .t-card .t-quote {
-  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  font-family: "Inter", "San Francisco", "Inter", Arial, sans-serif;
   color: rgba(32, 34, 42, 0.9);
   line-height: 1.6;
   margin: 0;
 }
 .testimonials .t-card .t-name {
   margin-top: auto;
-  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  font-family: "Inter", "San Francisco", "Inter", Arial, sans-serif;
   font-size: 14px;
   color: rgba(32, 34, 42, 0.9);
 }
@@ -2051,7 +2057,7 @@
   margin-bottom: 12px;
 }
 .about-badges .about-text {
-  font-family: "San Francisco", "Inter", Arial, sans-serif;
+  font-family: "Inter", "San Francisco", "Inter", Arial, sans-serif;
   color: rgba(32, 34, 42, 0.9);
   line-height: 1.6;
   margin: 0;
@@ -2097,13 +2103,80 @@
     width: 95px;
   }
 }
+.breadcrumb {
+  background: #f5f4f0;
+  border-bottom: 1px solid #e7e7e7;
+  height: 49px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.breadcrumb__inner {
+  width: 100%;
+  max-width: 1312px;
+  margin: 0 auto;
+  padding: 0 0px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 49px;
+  line-height: 1;
+}
+.breadcrumb__link, .breadcrumb__current {
+  font: 400 14.5px/1.2 "Inter", Arial, sans-serif;
+  color: rgba(32, 34, 42, 0.9);
+  white-space: nowrap;
+}
+.breadcrumb__link {
+  text-decoration: none;
+  color: rgba(32, 34, 42, 0.7);
+}
+.breadcrumb__link:hover {
+  color: #20222a;
+  text-decoration: underline;
+}
+.breadcrumb__sep {
+  color: rgba(32, 34, 42, 0.35);
+  padding: 0 2px;
+  user-select: none;
+}
+.breadcrumb__current {
+  color: #20222a;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 40vw;
+}
+
+@media (max-width: 768px) {
+  .breadcrumb {
+    height: 44px;
+  }
+  .breadcrumb__inner {
+    padding: 0 12px;
+    gap: 8px;
+  }
+  .breadcrumb__link, .breadcrumb__current {
+    font-size: 13px;
+  }
+  .breadcrumb__current {
+    max-width: 55vw;
+  }
+}
 .p-hero {
   position: relative;
   display: grid;
   grid-template-columns: 72px 1fr 420px;
   gap: 16px;
   min-height: 560px;
-  background: #fff;
+  background: url("https://ciri.la-studioweb.com/wp-content/uploads/2022/09/404-bg.jpg") bottom center/cover no-repeat;
+}
+.p-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05) 60%, rgba(0, 0, 0, 0.12));
+  pointer-events: none;
 }
 .p-hero__thumbs {
   display: grid;
@@ -2431,70 +2504,189 @@
     grid-template-columns: repeat(3, 56px);
   }
 }
+/* ===== Product Tabs ===== */
 .p-tabs {
-  margin-top: 10px;
-  background: #f5f4f0;
+  margin: 16px auto 0;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
 }
 .p-tabs__list {
   display: flex;
-  padding: 8px 10px 0;
+  align-items: flex-end;
+  gap: 24px;
+  height: 56px;
+  padding: 0 24px;
   background: #393D47;
-  border-radius: 6px 6px 0 0;
+  border-radius: 8px 8px 0 0;
+  position: relative;
+  overflow: visible;
 }
 .p-tabs__tab {
-  width: 700px;
   appearance: none;
   border: 0;
-  background: #393D47;
-  color: #fff;
-  padding: 10px 16px;
-  border-radius: 6px 6px 0 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.9);
+  font: 700 16px/1 "Inter", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+  padding: 18px 22px 12px;
+  border-radius: 8px 8px 0 0;
   cursor: pointer;
-  font: 700 14px/1 "San Francisco", "Inter", Arial, sans-serif;
-  opacity: 0.85;
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 .p-tabs__tab.is-active {
-  background: #ffffff;
+  background: #fff;
   color: #20222a;
-  opacity: 1;
   position: relative;
+  z-index: 1;
 }
-.p-tabs__tab.is-active::after {
+.p-tabs__tab.is-active::before {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
   top: -8px;
   height: 8px;
-  background: #3d3352;
-  border-radius: 6px 6px 0 0;
+  background: #353844;
+  border-radius: 8px 8px 0 0;
+}
+.p-tabs {
+  /* Panels wrapper */
 }
 .p-tabs__panels {
   background: #fff;
-  padding: 16px 18px 22px;
-  border-radius: 0 6px 6px 6px;
-}
-.p-tabs h4 {
-  font: 800 13px/1 "San Francisco", "Inter", Arial, sans-serif;
-  margin: 12px 0 6px;
-}
-.p-tabs p, .p-tabs li {
-  font: 400 14px/1.6 "San Francisco", "Inter", Arial, sans-serif;
-  color: #333;
-}
-.p-tabs ul {
-  margin: 0 0 8px 18px;
+  border-radius: 0 0 8px 8px;
+  padding: 20px;
 }
 
-/* mobile */
+#panel-desc {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 40px;
+  align-items: start;
+  padding: 24px 20px;
+  background: #fff;
+}
+#panel-desc .panel-desc-left,
+#panel-desc .panel-desc-right {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+#panel-desc .panel-desc-left h4 {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin: 0 0 20px;
+  color: #20222a;
+}
+#panel-desc .panel-desc-left p {
+  font-size: 18px;
+  line-height: 20px;
+  color: #20222a;
+  opacity: 0.9;
+  margin: 0 0 16px;
+}
+#panel-desc .panel-desc-right h4 {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin: 0 0 20px;
+  color: #20222a;
+}
+#panel-desc .panel-desc-right ul {
+  list-style: disc;
+  padding-left: 18px;
+  margin: 0 0 14px;
+}
+#panel-desc .panel-desc-right li {
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: #20222a;
+  line-height: 14px;
+}
+#panel-desc .panel-desc-right .feature-note {
+  font-size: 18px;
+  line-height: 1.4;
+  color: rgba(32, 34, 42, 0.8);
+  margin-top: 10px;
+}
+
+.p-tabs {
+  margin: 16px auto 0;
+  background: #fff;
+}
+
+.p-tabs__list {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  height: 56px;
+  padding: 0;
+  background: #393D47;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+}
+
+.p-tabs__tab {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.9);
+  font: 700 16px/1 "Inter", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+  padding: 0 16px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* tab active */
+.p-tabs__tab.is-active {
+  background: #fff;
+  color: #20222a;
+  position: relative;
+  z-index: 1;
+}
+
+.p-tabs__tab.is-active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -8px;
+  height: 8px;
+  background: #353844;
+  border-radius: 8px 8px 0 0;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1100px) {
+  #panel-desc,
+  #panel-man,
+  #panel-spec,
+  #panel-inc,
+  #panel-rev {
+    grid-template-columns: 1fr;
+    row-gap: 18px;
+  }
+}
 @media (max-width: 640px) {
   .p-tabs__list {
     flex-wrap: wrap;
     gap: 8px;
     padding: 8px;
+    height: auto;
   }
   .p-tabs__tab {
-    padding: 8px 12px;
+    padding: 10px 12px;
+    font-size: 14px;
   }
 }
 .howto {
@@ -2505,16 +2697,17 @@
   color: #20222a;
 }
 .howto__eyebrow {
-  margin: 0 0 6px;
-  font-size: 15px;
-  font-weight: 700px;
-  letter-spacing: 0.12em;
+  color: #000;
+  font-family: "Inter", Arial, sans-serif;
+  margin: 0 10px 2px;
+  font-size: 18px;
+  font-weight: 500;
   opacity: 0.7;
-  text-transform: uppercase;
   padding-bottom: 18px;
 }
 .howto__title {
-  margin: 0 0 8px;
+  margin: 0 0 2px;
+  letter-spacing: 2.92px;
   font-family: "Mango Grotesque", "Oswald", sans-serif;
   text-transform: uppercase;
   font-size: 64px;
@@ -2522,24 +2715,34 @@
   line-height: 1.05;
 }
 .howto__desc {
-  max-width: 680px;
+  font-family: "Inter", Arial, sans-serif;
+  color: #000;
+  max-width: 768px;
   margin: 0 auto 16px;
   font-size: 18px;
-  font-weight: 600;
-  line-height: 1.7;
+  font-weight: 400;
+  line-height: 1.2;
   opacity: 0.85;
 }
 .howto__btn {
+  font-family: "Inter", Arial, sans-serif;
+  text-transform: uppercase;
+  margin-top: 26px;
+  font-size: 14px;
+  width: 367px;
+  height: 41px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 14px;
+  padding: 8px 0;
+  padding-left: 15px;
+  margin-bottom: 5px;
   border-radius: 999px;
   border: 1px solid rgba(0, 0, 0, 0.18);
   background: #fff;
   color: #20222a;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 400;
   transition: 0.2s;
 }
 .howto__btn img {
@@ -2552,16 +2755,19 @@
   border-color: transparent;
 }
 .howto__video {
-  margin: 18px 0 0;
+  width: 1312px;
+  max-width: 100%;
+  aspect-ratio: 1312/738;
+  margin: 18px auto 0;
   position: relative;
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
-  aspect-ratio: 16/9;
   background: #f3f3f3;
   cursor: pointer;
-  width: 1100px;
-  height: 738px;
+  width: min(1312px, 100%);
+  aspect-ratio: 1312/738;
+  margin: 18px auto 0;
 }
 .howto__video:hover .howto__thumb {
   transform: scale(1.02);
@@ -2607,12 +2813,33 @@
   color: #fff;
   font-size: 28px;
   margin-left: 2px;
-  /* cân biểu tượng play */
 }
 .howto__play svg {
   position: absolute;
   inset: 0;
   fill: #000;
+}
+.howto .howto__video {
+  width: 1312px;
+  max-width: calc(100vw - 32px);
+  aspect-ratio: 1312/738;
+  margin: 18px 0 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
+  background: #f3f3f3;
+  cursor: pointer;
+}
+.howto .howto__thumb {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 @media (max-width: 768px) {
   .howto {
@@ -2631,9 +2858,34 @@
 }
 
 .product-carousel {
-  padding: 28px 0 36px;
+  padding: 28px 0 0px;
   background: #f5f4f0;
   position: relative;
+}
+.product-carousel .slick-dots {
+  position: relative;
+  margin-top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 14px;
+  display: flex !important;
+  justify-content: center;
+  gap: 1px;
+}
+.product-carousel .slick-dots li {
+  margin: 0;
+}
+.product-carousel .slick-dots button {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #a9a4a4;
+  border: 0;
+  text-indent: -9999px;
+  padding: 0;
+}
+.product-carousel .slick-dots .slick-active button {
+  background: #000;
 }
 .product-carousel__header {
   text-align: center;
@@ -2644,9 +2896,10 @@
   font-size: 64px;
   line-height: 1.1;
   font-weight: 800;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
-  padding-bottom: 37px;
-  letter-spacing: 0.02em;
+  padding-bottom: 27px;
+  padding-top: 40px;
   color: #20222a;
   margin: 0;
 }
@@ -2664,10 +2917,6 @@
 .product-carousel__item {
   flex: 0 0 auto;
   width: 352px;
-}
-.product-carousel .product-carousel__item {
-  padding: 0 10px;
-  box-sizing: border-box;
 }
 .product-carousel__arrow {
   position: absolute;
@@ -2721,7 +2970,8 @@
 }
 
 .product-card {
-  width: 300px;
+  padding-bottom: 64px;
+  width: 350px;
   height: 490px;
   background: #fff;
   border: 1px solid #e7e7e7;
@@ -2763,11 +3013,13 @@
 }
 .product-card__body {
   padding: 12px;
+  padding-top: 39px;
   transition: transform 0.3s ease;
 }
 .product-card__title {
-  font-size: 14px;
-  font-weight: 700;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
   text-transform: uppercase;
   margin: 0 0 6px;
   color: #20222a;
@@ -2775,12 +3027,12 @@
 .product-card__rating {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 10px;
   margin-bottom: 6px;
 }
 .product-card__rating .product-card__stars i {
   color: #f6b400;
-  font-size: 14px;
+  font-size: 15.5px;
 }
 .product-card__rating .product-card__reviews {
   font-size: 12px;
@@ -2807,16 +3059,16 @@
 }
 .product-card__actions {
   position: absolute;
+  left: 12px;
+  right: 12px;
   bottom: 12px;
-  left: 0;
-  width: 100%;
   display: flex;
   justify-content: center;
   gap: 10px;
   opacity: 0;
   pointer-events: none;
-  transform: translateY(20px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(16px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 .product-card__actions .product-card__btn {
   flex: 0 0 auto;
@@ -3033,7 +3285,7 @@
 
 .kv__slide {
   position: relative;
-  height: 580px;
+  height: 700px;
   /* PC */
 }
 @media (max-width: 768px) {
@@ -3060,22 +3312,18 @@
   pointer-events: none;
 }
 
-/* nội dung căn GIỮA */
 .kv__content {
   position: relative;
   z-index: 2;
   height: 100%;
   display: grid;
   place-content: center;
-  /* căn giữa dọc + ngang */
   justify-items: center;
-  /* text & nút căn giữa */
   gap: 14px;
   padding: 0 24px;
   color: #fff;
-  max-width: 760px;
+  max-width: 862px;
   margin: 0 auto;
-  /* ở giữa theo ngang */
   text-align: center;
 }
 @media (max-width: 768px) {
@@ -3087,11 +3335,12 @@
 
 .kv__title {
   margin: 0;
+  padding-top: 100px;
   font-family: "Mango Grotesque", "Oswald", sans-serif;
   text-transform: uppercase;
-  letter-spacing: 0.02em;
+  letter-spacing: 2.9px;
   line-height: 1.05;
-  font-size: 100px;
+  font-size: 130px;
   font-weight: 800;
 }
 @media (max-width: 768px) {
@@ -3101,10 +3350,13 @@
 }
 
 .kv__desc {
-  margin: 0;
-  font-size: 16px;
-  line-height: 1.6;
+  margin: 20px 10px 0;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 0 15px;
+  letter-spacing: 1.1px;
   opacity: 0.95;
+  line-height: 100%;
 }
 @media (max-width: 768px) {
   .kv__desc {
@@ -3113,9 +3365,13 @@
 }
 
 .kv__btn {
+  margin-bottom: 109px;
+  margin-top: 62px;
+  padding-top: 6px;
+  width: 198px;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 13px;
   padding: 10px 16px;
   border-radius: 999px;
   border: 0;
@@ -3125,9 +3381,10 @@
   backdrop-filter: blur(2px);
 }
 .kv__btn img {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   display: block;
+  margin-left: 12px;
 }
 .kv__btn:hover {
   background: rgba(255, 255, 255, 0.2);
@@ -3185,7 +3442,7 @@
 }
 
 .kv {
-  height: 580px;
+  height: 597px;
 }
 
 .kv__wrapper,
@@ -3216,6 +3473,12 @@
   padding: 28px 0 18px;
   text-align: center;
 }
+
+.brew-flow .container {
+  width: 100%;
+  margin: 0 auto;
+}
+
 .brew-flow__title {
   font-family: "Mango Grotesque", "Oswald", sans-serif;
   font-weight: 800;
@@ -3225,50 +3488,26 @@
   margin: 0 0 16px;
   color: #20222a;
 }
+
 .brew-flow__art {
+  width: 1230px;
+  max-width: 100%;
+  aspect-ratio: 1230/485;
   margin: 10px auto 0;
-  max-width: 980px;
+  display: block;
 }
+
 .brew-flow__art img {
-  padding-top: 10px;
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: contain;
+  padding-top: 10px;
 }
-.brew-flow {
-  /* Responsive */
-}
+
 @media (max-width: 768px) {
-  .brew-flow__steps {
-    gap: 10px;
-  }
-  .brew-flow__step {
-    min-width: 90px;
-  }
-  .brew-flow__badge {
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-  }
-  .brew-flow__label {
-    font-size: 16px;
-  }
-  .brew-flow__arrow {
-    width: clamp(36px, 12vw, 80px);
-  }
-}
-@media (max-width: 520px) {
-  .brew-flow__steps {
-    flex-wrap: wrap;
-    row-gap: 14px;
-    justify-content: center;
-  }
-  .brew-flow__step {
-    margin-right: 0;
-  }
-  .brew-flow__arrow {
-    display: none;
+  .brew-flow__title {
+    font-size: 36px;
   }
 }
 

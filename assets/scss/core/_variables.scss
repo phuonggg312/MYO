@@ -12,8 +12,9 @@ $color-wine:#622128;
 $color-spirit:#4E4D98;
 $color-border: #687597;
 
-$font-heading: "Mango Grotesque", 'Oswald', sans-serif;
-$font-body: 'San Francisco', 'Inter', Arial, sans-serif;
+// _variables.scss
+$font-heading: "Mango Grotesque", "Oswald", sans-serif;
+$font-body: "Inter",'San Francisco', 'Inter', Arial, sans-serif;
 
 
 $fs-base: 16px;
