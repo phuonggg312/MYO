@@ -114,7 +114,6 @@ document.addEventListener('click', (e) => {
     });
   });
 
-  // hỗ trợ bàn phím
   document.querySelectorAll('.p-tabs__tab').forEach(tab => {
     tab.addEventListener('keydown', (e) => {
       if (!['ArrowLeft','ArrowRight','Home','End'].includes(e.key)) return;
@@ -128,3 +127,25 @@ document.addEventListener('click', (e) => {
       tabs[i].focus();
     });
   });
+  const mainImage = document.getElementById('mainImage');
+const thumbs = document.querySelectorAll('.pdp__thumb');
+
+thumbs.forEach(t => {
+  t.addEventListener('click', () => {
+    const newSrc = t.querySelector('img').getAttribute('src');
+    if (newSrc === mainImage.getAttribute('src')) return;
+    thumbs.forEach(x => x.classList.remove('is-active'));
+    t.classList.add('is-active');
+    mainImage.classList.add('is-fading');
+    const onEnd = () => {
+      mainImage.removeEventListener('transitionend', onEnd);
+      const onLoad = () => {
+        mainImage.removeEventListener('load', onLoad);
+        requestAnimationFrame(() => mainImage.classList.remove('is-fading'));
+      };
+      mainImage.addEventListener('load', onLoad);
+      mainImage.setAttribute('src', newSrc);
+    };
+    mainImage.addEventListener('transitionend', onEnd);
+  });
+});

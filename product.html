@@ -31,97 +31,113 @@
         </div>
     </nav>
 
-    <section class="p-hero">
-        <!-- Left: thumbnails -->
-        <aside class="p-hero__thumbs" aria-label="Gallery thumbnails">
-            <button class="p-hero__thumb is-active" aria-current="true">
-                <img src="./assets/img/6c5e45dd16bce9e92794f70054516bcb6f500222.png" alt="Main image 1">
-            </button>
-            <button class="p-hero__thumb">
-                <img src="./assets/img/6c5e45dd16bce9e92794f70054516bcb6f500222.png" alt="Main image 2">
-            </button>
-            <button class="p-hero__thumb">
-                <img src="./assets/img/6c5e45dd16bce9e92794f70054516bcb6f500222.png" alt="Main image 3">
-            </button>
-        </aside>
+    <section class="pdp">
+        <div class="pdp__hero">
+            <img id="mainImage" class="pdp__hero-bg" src="./assets/img/6c5e45dd16bce9e92794f70054516bcb6f500222.png"
+                alt="Kit Bundle" />
+            <div class="pdp__thumbs">
+                <button class="pdp__thumb is-active">
+                    <img src="./assets/img/6c5e45dd16bce9e92794f70054516bcb6f500222.png" alt="">
+                </button>
+                <button class="pdp__thumb">
+                    <img src="./assets/img/6229663401390640c8f58dbfb152746776241345.png" alt="">
+                </button>
+                <button class="pdp__thumb">
+                    <img src="assets/img/bb879843ef7b507b36cedc719333efe56de058c6 (1).jpg" alt="">
+                </button>
+            </div>
+            <div class="pdp-card__hero">
+           <article class="pdp-card">
+                <header class="pdp-card__head">
+                    <div class="pdp-card__badges">
+                        <span class="badge badge--beer">BEER</span>
+                        <span class="badge badge--sale">SALE</span>
+                    </div>
+                    <div class="pdp-card__topline">
+                        <h1 class="pdp-card__title">Kit Bundle</h1>
+                        <div class="pdp-card__price">
+                            <span class="price__now">$2,800.00</span>
+                            <span class="price__compare">Valued at $3,100.00</span>
+                        </div>
+                    </div>
+                    <div class="pdp-card__meta">
+                        <span class="sku">SKU:4040255</span>
+                        <div class="rating">
+                            <span class="stars" aria-label="4 of 5">★★★★☆</span>
+                            <span class="reviews">10 reviews</span>
+                        </div>
+                    </div>
+                </header>
 
-        <!-- Center: big image -->
-        <figure class="p-hero__media">
-            <img src="./assets/img/ffd706a46f3a3af0e61d5213a66625281192e019.png " alt="Kit Bundle main image">
-        </figure>
-
-        <!-- Right: product card -->
-        <aside class="p-hero__card">
-            <div class="p-card">
-                <div class="p-card__badges">
-                    <span class="badge badge--pill">BEER</span>
-                    <span class="badge badge--sale">SALE</span>
-                </div>
-
-                <h1 class="p-card__title">Kit Bundle</h1>
-
-                <div class="p-card__price">
-                    <span class="p-card__price-cur">$2,800.00</span>
-                    <span class="p-card__price-sub">Valued at $3,100.00</span>
-                </div>
-
-                <div class="p-card__meta">
-                    <span class="p-stars" aria-label="4.8 out of 5">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                    </span>
-                    <a class="p-card__reviews" href="#reviews">10 reviews</a>
-                </div>
-
-                <p class="p-card__desc">
-                    This Ale Beer Recipe Kit creates a full bodied, malty beer based on the traditional Oktoberfest
-                    style…
+                <p class="pdp-card__desc">
+                    This Ale Beer Recipe Kit creates a full bodied, malty beer that's based on the traditional
+                    Oktoberfest style. It has a light red hue, subtle bitterness, caramel sweetness and
+                    <a class="see-more" href="#">see more</a>
                 </p>
 
-                <div class="p-card__purchase">
-                    <div class="p-qty" role="group" aria-label="Quantity">
-                        <button class="p-qty__btn" data-act="dec" aria-label="Decrease">−</button>
-                        <input class="p-qty__input" type="number" value="1" min="1" inputmode="numeric">
-                        <button class="p-qty__btn" data-act="inc" aria-label="Increase">+</button>
+                <div class="pdp-card__actions">
+                    <div class="qty">
+                        <button class="qty__btn" aria-label="decrease">−</button>
+                        <input class="qty__input" type="number" value="1" min="1" inputmode="numeric" />
+                        <button class="qty__btn" aria-label="increase">+</button>
                     </div>
-
-                    <button class="p-btn p-btn--primary p-card__add">ADD TO CART</button>
-
-                    <button class="p-card__icon" aria-label="Save to wishlist">
-                        <i class="fa-regular fa-heart"></i>
-                    </button>
-                    <button class="p-card__icon" aria-label="Share">
-                        <i class="fa-solid fa-share-nodes"></i>
-                    </button>
+                    <button class="btn btn--primary">ADD TO CART</button>
+                    <button class="btn btn--wish" aria-label="Add to wishlist"><img src="./assets/img/heart.png"
+                            alt=""></button>
                 </div>
 
-                <div class="p-card__shipping">
-                    Free shipping over $200 · 4 interest-free payments w/ Afterpay
-                </div>
+                <p class="pdp-card__shipping">Free shipping over $50 • or 4 interest-free payments with Afterpay</p>
 
-                <!-- Features -->
-                <section class="p-features">
-                    <h3 class="p-features__title">FEATURES</h3>
-                    <ul class="p-features__list">
-                        <li class="p-feature">
-                            <span class="p-feature__icon"><img src="# alt=""></span>
-                        <span class=" p-feature__name">Pale Ale</span>
+
+
+
+            </article>
+            <article class="pdp-card pad-card--features" aria-labelledby="featuresTitle">
+                <section class="features">
+                    <h3 id="featuresTitle" class="features__title">FEATURES</h3>
+                    <ul class="features__list">
+                        <li class="feature">
+                            <div class="feature__cell feature__cell--type">
+                                <img class="icon" src="./assets/img/f5476a3099bb4c9888ea8036562f8614e93ad486.png"
+                                    alt="">
+                                <span class="text">Pale Ale</span>
+                            </div>
+                            <div class="feature__cell">
+                                <img class="icon" src="./assets/img/f5476a3099bb4c9888ea8036562f8614e93ad486.png"
+                                    alt="">
+                                <span class="text">Newtowner<br>like style</span>
+                            </div>
+                            <div class="feature__cell">
+                                <img class="icon" src="./assets/img/f5476a3099bb4c9888ea8036562f8614e93ad486.png" alt="">
+                                <span class="text">Fruity &amp;<br>Smooth</span>
+                            </div>
                         </li>
-                        <li class="p-feature">
-                            <span class="p-feature__icon"><img src="#" alt=""></span>
-                            <span class="p-feature__name">Newcomer like style</span>
-                        </li>
-                        <li class="p-feature">
-                            <span class="p-feature__icon"><img src="#" alt=""></span>
-                            <span class="p-feature__name">Fruity &amp; Smooth</span>
+
+                        <li class="feature">
+                            <div class="feature__cell feature__cell--type">
+                                <img class="icon" src="./assets/img/2737a8d3962eca755a25bcf2730e079cd2e62262.png"
+                                    alt="">
+                                <span class="text">Pale Ale</span>
+                            </div>
+                            <div class="feature__cell">
+                                <img class="icon" src="./assets/img/f5476a3099bb4c9888ea8036562f8614e93ad486.png"
+                                    alt="">
+                                <span class="text">Newtowner<br>like style</span>
+                            </div>
+                            <div class="feature__cell">
+                                <img class="icon" src="./assets/img/f5476a3099bb4c9888ea8036562f8614e93ad486.png" alt="">
+                                <span class="text">Fruity &amp;<br>Smooth</span>
+                            </div>
                         </li>
                     </ul>
                 </section>
-
-
+            </article>
             </div>
-        </aside>
+
+ 
+
+
+        </div>
     </section>
 
 
@@ -351,7 +367,7 @@
             </section>
             <!-- Reviews -->
             <section id="panel-rev" role="tabpanel" aria-labelledby="tab-rev" hidden>
-                 <div class="panel-desc-left">
+                <div class="panel-desc-left">
                     <h4>DESCRIPTION:</h4>
                     <p>
                         The Grainfather G40 brewing system has a bigger capacity and better connectivity.

@@ -30,7 +30,7 @@ $(document).ready(function () {
         ]
     });
     $('.brew-grid,.product-carousel__list').slick({
-        slidesToShow: 4,
+        slidesToShow: 3.7,
         slidesToScroll: 1,
         infinite: false,
         arrows: true,
@@ -42,8 +42,8 @@ $(document).ready(function () {
             '<button type="button" class="cate-arrow cate-next" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>',
         appendArrows: '.product-carousel__viewport',
         responsive: [
-            { breakpoint: 1200, settings: { slidesToShow: 4 } },
-            { breakpoint: 992, settings: { slidesToShow: 3 } },
+            { breakpoint: 1200, settings: { slidesToShow: 3.7 } },
+            { breakpoint: 992, settings: { slidesToShow: 2.7 } },
             { breakpoint: 768, settings: { slidesToShow: 2 } }
         ]
     });
@@ -126,7 +126,15 @@ $(document).ready(function () {
       '<button type="button" class="kv__arrow kv__arrow--prev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>',
     nextArrow:
       '<button type="button" class="kv__arrow kv__arrow--next" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>',
-     
+      responsive: [
+    {
+      breakpoint: 768,        
+      settings: {
+        arrows: false          
+        
+      }
+    }
+  ]
   });
 });
 
