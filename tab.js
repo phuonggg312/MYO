@@ -55,97 +55,115 @@ $(function () {
   const root = document.querySelector('#product-tabs');
   if(!root) return;
 
-  const tabs   = [...root.querySelectorAll('.p-tabs__tab')];
+  const tabs = [...root.querySelectorAll('.p-tabs__tab')];
   const panels = [...root.querySelectorAll('[role="tabpanel"]')];
+  const isMobile = window.innerWidth <= 768;
 
-  function activate(id){
-    tabs.forEach(t=>{
+  function activateDesktop(id) {
+    // Desktop behavior - show/hide panels
+    tabs.forEach(t => {
       const on = t.dataset.target === id;
       t.classList.toggle('is-active', on);
       t.setAttribute('aria-selected', on ? 'true' : 'false');
       t.tabIndex = on ? 0 : -1;
     });
-    panels.forEach(p=>{
+    
+    panels.forEach(p => {
       p.hidden = (p.id !== id);
     });
   }
 
-  root.addEventListener('click', e=>{
-    const btn = e.target.closest('.p-tabs__tab'); if(!btn) return;
-    activate(btn.dataset.target);
-    history.replaceState(null, "", "#" + btn.dataset.target);
+  function activateMobile(id) {
+    // Mobile behavior - accordion
+    tabs.forEach(t => {
+      const isTarget = t.dataset.target === id;
+      const wasOpen = t.classList.contains('is-open');
+      
+      // Close all first
+      t.classList.remove('is-open');
+      t.classList.remove('is-active');
+      t.setAttribute('aria-selected', 'false');
+      
+      // Open target if it wasn't already open
+      if (isTarget && !wasOpen) {
+        t.classList.add('is-open');
+        t.classList.add('is-active');
+        t.setAttribute('aria-selected', 'true');
+      }
+    });
+    
+    panels.forEach(p => {
+      const isTarget = p.id === id;
+      const wasOpen = p.classList.contains('is-open');
+      
+      p.classList.remove('is-open');
+      p.hidden = true;
+      
+      if (isTarget && !wasOpen) {
+        p.classList.add('is-open');
+        p.hidden = false;
+      }
+    });
+  }
+
+  function handleTabClick(btn) {
+    if (isMobile) {
+      activateMobile(btn.dataset.target);
+    } else {
+      activateDesktop(btn.dataset.target);
+    }
+  }
+
+  // Event listeners
+  root.addEventListener('click', e => {
+    const btn = e.target.closest('.p-tabs__tab'); 
+    if(!btn) return;
+    handleTabClick(btn);
   });
 
-  root.addEventListener('keydown', e=>{
+  // Keyboard navigation
+  root.addEventListener('keydown', e => {
     const current = document.activeElement;
     if(!current.classList.contains('p-tabs__tab')) return;
+    
     const i = tabs.indexOf(current);
     let j = i;
+    
     if(e.key === 'ArrowRight') j = (i+1) % tabs.length;
     else if(e.key === 'ArrowLeft') j = (i-1+tabs.length) % tabs.length;
     else if(e.key === 'Home') j = 0;
     else if(e.key === 'End') j = tabs.length-1;
     else return;
+    
     e.preventDefault();
     tabs[j].focus();
-    tabs[j].click();
+    handleTabClick(tabs[j]);
   });
 
+  // Handle resize
+  function handleResize() {
+    const newIsMobile = window.innerWidth <= 768;
+    if (newIsMobile !== isMobile) {
+      // Reset to first tab on resize
+      const firstId = tabs[0].dataset.target;
+      if (newIsMobile) {
+        activateMobile(firstId);
+      } else {
+        activateDesktop(firstId);
+      }
+    }
+  }
+
+  // Initial setup
   const hash = location.hash.replace('#','');
   const firstId = tabs[0].dataset.target;
-  const targetId = panels.some(p=>p.id===hash) ? hash : firstId;
-  activate(targetId);
+  const targetId = panels.some(p => p.id === hash) ? hash : firstId;
+  
+  if (isMobile) {
+    activateMobile(targetId);
+  } else {
+    activateDesktop(targetId);
+  }
+
+  window.addEventListener('resize', handleResize);
 })();
-document.addEventListener('click', (e) => {
-    const btn = e.target.closest('.p-tabs__tab');
-    if (!btn) return;
-
-    // tabs
-    document.querySelectorAll('.p-tabs__tab').forEach(t => {
-      t.classList.toggle('is-active', t === btn);
-      t.setAttribute('aria-selected', t === btn ? 'true' : 'false');
-      t.tabIndex = t === btn ? 0 : -1;
-    });
-
-    // panels
-    const targetId = btn.dataset.target;
-    document.querySelectorAll('.p-tabs [role="tabpanel"]').forEach(p => {
-      p.hidden = p.id !== targetId;
-    });
-  });
-
-  document.querySelectorAll('.p-tabs__tab').forEach(tab => {
-    tab.addEventListener('keydown', (e) => {
-      if (!['ArrowLeft','ArrowRight','Home','End'].includes(e.key)) return;
-      const tabs = [...document.querySelectorAll('.p-tabs__tab')];
-      let i = tabs.indexOf(e.currentTarget);
-      if (e.key === 'ArrowLeft') i = (i - 1 + tabs.length) % tabs.length;
-      if (e.key === 'ArrowRight') i = (i + 1) % tabs.length;
-      if (e.key === 'Home') i = 0;
-      if (e.key === 'End') i = tabs.length - 1;
-      tabs[i].click();
-      tabs[i].focus();
-    });
-  });
-  const mainImage = document.getElementById('mainImage');
-const thumbs = document.querySelectorAll('.pdp__thumb');
-
-thumbs.forEach(t => {
-  t.addEventListener('click', () => {
-    const newSrc = t.querySelector('img').getAttribute('src');
-    if (newSrc === mainImage.getAttribute('src')) return;
-    thumbs.forEach(x => x.classList.remove('is-active'));
-    t.classList.add('is-active');
-    mainImage.classList.add('is-fading');
-    const onEnd = () => {
-      mainImage.removeEventListener('transitionend', onEnd);
-      const onLoad = () => {
-        mainImage.removeEventListener('load', onLoad);
-        requestAnimationFrame(() => mainImage.classList.remove('is-fading'));
-      };
-      mainImage.addEventListener('load', onLoad);
-      mainImage.setAttribute('src', newSrc);
-    };
-    mainImage.addEventListener('transitionend', onEnd);
-  });
-});

@@ -1,8 +1,5 @@
 @use "../core/variables" as *;
 
-/* =========================================
-   HEADER (desktop + mobile) + MOBILE SEARCH TAB
-   ========================================= */
 .header {
     background: $color-muted;
     font-family: $font-body;
@@ -18,7 +15,7 @@
         padding: 12px 12px;
         line-height: 100%;
         font-weight: 600;
-        text-align: center  ;
+        text-align: center;
         justify-content: center;
         gap: 8px;
 
@@ -39,7 +36,7 @@
         height: 73px;
         padding: 14px 18px;
         padding-top: 17px;
-        padding-top:14px;
+        padding-top: 14px;
         padding-right: 20px;
 
         /* menu button (hamburger) */
@@ -126,7 +123,7 @@
             background: transparent;
             border: 0;
             padding-right: 16px;
-            padding-left:18px;
+            padding-left: 18px;
             font-family: $font-body;
             font-weight: 400;
             font-size: $fs-sm;
@@ -161,18 +158,18 @@
 
     /* ======== Bottom row (desktop nav) ======== */
     .header_bot {
-        height:60px;
+        height: 60px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         border-bottom: 1px solid $color-line;
         padding: 8px 24px;
-        
+
 
         .header-nav ul {
             display: flex;
             gap: 80px;
-            
+
             list-style: none;
             margin: 0;
             padding-top: 1%;
@@ -198,7 +195,7 @@
             color: $color-white;
             text-decoration: none;
             padding: 6px 27px;
-            
+
             margin-right: 39px;
             border-radius: 16px;
             font-family: $font-body;
@@ -208,10 +205,15 @@
     }
 }
 
-/* =========================================
-   MOBILE LAYOUT
-   ========================================= */
-@media (max-width: $bp-sm) {
+@media (max-width: $bp-md) {
+    .header .promo-bar{
+        font-size: 12px;
+        font-weight: 400;
+        a{
+            font-size: 12px;
+            font-weight: 700px;
+        }
+    }
     .header {
         .header_top {
             display: grid;
@@ -222,6 +224,12 @@
             row-gap: 10px;
             align-items: center;
             padding: 10px 12px;
+            height: 136px;
+            border-bottom: 1px #000;
+
+            .action {
+                gap: 27px !important;
+            }
 
             .menu-btn {
                 grid-area: menu;
@@ -235,15 +243,17 @@
                 justify-self: center;
 
                 img {
-                    height: 40px;
+                    height: 23px;
                     padding-top: 0;
+                    width: auto;
+                    padding-left: 55px;
                 }
             }
 
             .action {
                 grid-area: action;
                 justify-self: end;
-                gap: 32px;
+                gap: 12px;
             }
 
             .search {
@@ -251,17 +261,18 @@
                 width: 100%;
 
                 .search_mode {
-                    width: 100px;
-                    height: 44px;
+                    width: 97px;
+                    height: 38px;
                     padding: 8px 11px;
-                    font-size: 12px;
-                    text-transform: capitalize;
+                    font-size: 14px;
+                    text-transform: none;
                 }
 
                 .search_input {
                     height: 44px;
                     padding: 0 40px 0 8px;
                     font-size: 14px;
+                    text-transform: none;
                 }
 
                 .search_btn {
@@ -304,7 +315,7 @@
     color: $color-white;
 }
 
-@media (max-width: 768px) {
+@media (max-width: $bp-md) {
     .search--mobile {
         display: block;
         margin-top: 10px;
@@ -384,7 +395,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $bp-md) {
     .search--mobile .search_tab {
         display: none;
     }
@@ -437,7 +448,7 @@
     position: relative;
     padding-right: 90px;
 
-    
+
 }
 
 @media (min-width: 769px) {
@@ -446,7 +457,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $bp-md) {
     .menu-tab {
         position: absolute;
         top: 48px;
@@ -468,9 +479,12 @@
             padding: 12px 30px;
             text-align: center;
             font-weight: 700;
-             a{ color: $color-white !important;}
+
+            a {
+                color: $color-white !important;
+            }
         }
-       
+
     }
 }
 
@@ -478,88 +492,23 @@
     width: -webkit-fill-available;
     display: block;
 }
-@media (max-width: 768px) {
-  .header {
-    .header_top {
-      display: grid;
-      grid-template-columns: 40px 1fr 80px;
-      grid-template-areas:
-        "menu logo action"
-        "search search search";
-      row-gap: 10px;
-      align-items: center;
-      padding: 10px 12px;
 
-      .menu-btn {
-        grid-area: menu;
-        display: grid;
-        visibility: visible;
-        place-items: center;
-      }
-
-      .logo {
-        grid-area: logo;
-        justify-self: center;
-
-        img {
-          height: 40px;
-          max-width: 100%; /* Đảm bảo logo không bị tràn */
-          padding-top: 0;
-        }
-      }
-
-      .action {
-        grid-area: action;
-        justify-self: end;
-        gap: 12px;
-      }
-
-      .search {
-        grid-area: search;
-        width: 100%;
-
-        .search_mode {
-          width: 100px;
-          height: 44px;
-          padding: 8px 11px;
-          font-size: 12px;
-          text-transform: capitalize;
-        }
-
-        .search_input {
-          height: 44px;
-          padding: 0 40px 0 8px;
-          font-size: 14px;
-        }
-
-        .search_btn {
-          right: 10px;
-          bottom: 10px;
-
-          i {
-            font-size: 16px;
-          }
-        }
-      }
-    }
-
-    .header_bot {
-      display: none;
-    }
-  }
-}
 .header {
-  position: relative;
-  z-index: 1000;
+    position: relative;
+    z-index: 1000;
 }
 
-@media (max-width: 768px) {
-  :root {
-    --promo-h: 35px;
-    --headtop-h: 5px;
-  }
+@media (max-width: $bp-md) {
+    :root {
+        --promo-h: 35px;
+        --headtop-h: 5px;
+    }
 
-  .hero-section { padding-top: calc(var(--promo-h) + var(--headtop-h)); }
-  .hero-slider { margin-top: calc(var(--promo-h) + var(--headtop-h)); } 
+    .hero-section {
+        padding-top: calc(var(--promo-h) + var(--headtop-h));
+    }
+
+    .hero-slider {
+        margin-top: calc(var(--promo-h) + var(--headtop-h));
+    }
 }
-
